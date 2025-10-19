@@ -10,6 +10,14 @@
         echo $_SESSION['firstname'];
         ?>
     </h4>
+    <?php
+    // $role = $conn->prepare("SELECT * FROM `users` WHERE `Email` = ?")
+    // ->bind_param("s", $_SESSION['email'])     
+    // ->execute()
+    // ->get_result();
+    // $role = $result->fetch_assoc()["Role"];
+    // echo "<h1>".$role."</h1>";
+    ?>
     <button class="toggle-btn hide-sm" type="button" onclick="changeTheme()">
         Switch Theme
     </button>
