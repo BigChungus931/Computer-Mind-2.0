@@ -16,6 +16,7 @@ html {
   box-sizing: inherit;
 }
 
+/* correct CSS var root */
 :root {
   --nav-height: 120px;
   --sidebar-width: 220px;
@@ -93,6 +94,7 @@ body {
   margin-left: auto;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   gap: 12px;
 }
 
@@ -105,6 +107,14 @@ body {
   color: var(--font-color);
   font-size: 16px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.welcome-dropdown {
+  color: var(--font-color);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .account-btn {
@@ -121,6 +131,23 @@ body {
   color: var(--font-color);
   border-radius: 8px;
   padding: 6px 10px;
+}
+
+.icon-btn {
+  background: none;
+  border: 1px solid var(--border-color);
+  color: var(--font-color);
+  border-radius: 8px;
+  padding: 6px 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+@media (max-width: 768px) {
+  .nav-right { margin-left: auto; gap: 8px; justify-content: flex-end; align-items: center; }
+  .welcome-text { display: none; }
+  .user-label { display: inline; font-size: 14px; }
 }
 
 .sidebar {
@@ -215,7 +242,6 @@ li {
   border: none;
   cursor: pointer;
   display: none;
-  margin-right: 4rem;
 }
 
 .main-content {
@@ -380,9 +406,9 @@ img, video, canvas, svg {
 
 /* Phone view */
 @media (max-width: 768px) {
-  .logo {
-    width: clamp(140px, 40vw, 200px) !important;
-  }
+  .logo { width: clamp(120px, 35vw, 180px) !important; }
+
+  :root { --sidebar-width: 80vw; }
 
   .sidebar {
     top: var(--nav-height) !important;
@@ -394,70 +420,38 @@ img, video, canvas, svg {
     z-index: 5;
   }
 
-  .sidebar.active {
-    transform: translateX(0);
-  }
+  .sidebar.active { transform: translateX(0); }
 
-  .navbar {
-    box-shadow: none !important;
-  }
+  .navbar { box-shadow: none !important; }
 
-  .hamburger {
-    display: block;
-  }
+  .hamburger { display: block; }
 
-  .hide-lg {
-    display: block !important;
-  }
+  .hide-lg { display: block !important; }
+  .hide-sm { display: none !important; }
 
-  .hide-sm {
-    display: none !important;
-  }
+  .main-content { position: relative; margin-top: var(--nav-height) !important; margin-left: 0 !important; width: 100%; min-height: auto !important; }
 
-  .main-content {
-    position: relative;
-    margin-top: var(--nav-height) !important;
-    margin-left: 0 !important;
-    width: 100%;
-    min-height: auto !important;
-  }
+  .main-content h1 { padding-top: 1rem; padding-bottom: 1rem; }
 
-  .main-content h1 {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
+  .bg-title { padding: 10rem 0 !important; }
 
-  .bg-title {
-    padding: 10rem 0 !important;
-  }
+  .section-title { font-size: 35px !important; }
 
-  .section-title {
-    font-size: 35px !important;
-  }
+  .section-par { font-size: 16px !important; padding: 0 15px; text-align: justify; }
 
-  .section-par {
-    font-size: 16px !important;
-    padding: 0 15px;
-    text-align: justify;
-  }
-
-  .yt {
-    max-width: 100% !important;
-  }
+  .yt { max-width: 100% !important; }
 
   .background,
   .background-py,
   .background-js,
   .background-cplus,
   .background-php-sql,
-  .background-web {
-    background-size: 100% 400px;
-    margin-top: -10px;
-  }
+  .background-web { background-size: 100% 400px; margin-top: -10px; }
 
-  .video-section {
-    width: 88% !important;
-  }
+  .video-section { width: 88% !important; }
+
+  .welcome-text { display: none; }
+  .account-btn { padding: 6px 10px; }
 }
 
 /* Ipad view */
@@ -541,7 +535,7 @@ img, video, canvas, svg {
   }
 
   .sidebar {
-    margin-top: var(--nav-height) !important;
+    margin-top: 0  !important;
     position: fixed;
     width: var(--sidebar-width);
     left: 0;
