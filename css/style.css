@@ -3,7 +3,7 @@
 }
 
 .form {
-  width: 600px;
+  width: min(600px, 92vw);
   background-color: white;
   margin: 5em auto;
   border-radius: 15px;
@@ -58,7 +58,7 @@ select {
 }
 
 .logo {
-  width: 270px;
+  width: clamp(180px, 35vw, 270px);
   display: block;
   margin: 15px auto;
 }

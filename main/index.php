@@ -54,36 +54,16 @@ include "include/session.php";
 
             <div class="carousel-inner">
               <div class="carousel-item active" data-bs-interval="5000">
-                <img
-                  class="d-block w-100"
-                  style="height: 800px; object-fit: cover"
-                  src="img/bg.jpg"
-                  alt="General programming"
-                />
+                <img class="d-block w-100" src="img/bg.jpg" alt="General programming" />
               </div>
               <div class="carousel-item" data-bs-interval="5000">
-                <img
-                  class="d-block w-100"
-                  style="height: 800px; object-fit: cover"
-                  src="img/bg1.jpg"
-                  alt="General programming"
-                />
+                <img class="d-block w-100" src="img/bg1.jpg" alt="General programming" />
               </div>
               <div class="carousel-item" data-bs-interval="5000">
-                <img
-                  class="d-block w-100"
-                  style="height: 800px; object-fit: cover"
-                  src="img/bg2.png"
-                  alt="General programming"
-                />
+                <img class="d-block w-100" src="img/bg2.png" alt="General programming" />
               </div>
               <div class="carousel-item" data-bs-interval="5000">
-                <img
-                  class="d-block w-100"
-                  style="height: 800px; object-fit: cover"
-                  src="img/webdesign.jpg"
-                  alt="web development"
-                />
+                <img class="d-block w-100" src="img/webdesign.jpg" alt="web development" />
               </div>
             </div>
 

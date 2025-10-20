@@ -1,7 +1,26 @@
 function hamburgerf() {
   const sidebar = document.getElementById("sidebar");
   sidebar.classList.toggle("active");
+  const toggler = document.querySelector('.hamburger');
+  if (toggler) {
+    const expanded = toggler.getAttribute('aria-expanded') === 'true';
+    toggler.setAttribute('aria-expanded', (!expanded).toString());
+  }
 }
+
+function syncNavHeightVar() {
+  const nav = document.querySelector('.navbar');
+  if (!nav) return;
+  const h = nav.offsetHeight; // includes padding
+  document.documentElement.style.setProperty('--nav-height', h + 'px');
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  syncNavHeightVar();
+});
+
+window.addEventListener('load', syncNavHeightVar);
+window.addEventListener('resize', syncNavHeightVar);
 const headers = document.querySelectorAll(".acc-header");
 headers.forEach((header) => {
   header.addEventListener("click", () => {

@@ -1,4 +1,4 @@
-<div class="sidebar" id="sidebar">
+<div class="sidebar" id="sidebar" role="navigation" aria-label="Section navigation">
       <a href="index.php">
         <i class="fas fa-home"></i>
         Home
@@ -7,7 +7,7 @@
         <i class="fab fa-js"></i>
         Javascript</a
       >
-      <a href="Python.php">
+      <a href="python.php">
         <i class="fab fa-python"></i>
         Python</a
       >
