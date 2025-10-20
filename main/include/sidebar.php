@@ -35,7 +35,6 @@
         </button>
         <ul class="dropdown-menu">
           <li><a href="#" class="dropdown-item">Action</a></li>
-          <li><a href="?action=logout" class="dropdown-item">Logout</a></li>
         </ul>
       </div>
       <button class="toggle-btn hide-lg" type="button" onclick="changeTheme()">
