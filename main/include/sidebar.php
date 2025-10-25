@@ -2,17 +2,13 @@
       <?php
       $sql = "SELECT name, icon, link FROM courses";
       $result = $conn->query($sql);
-      foreach ($result as $course){
-        if ($course["name"] == "Python" && 1!=2){
-          continue;
-        } else {
-            echo '
-            <a href="'.$course["link"].'">
-            '.$course["icon"].'
-            '.$course["name"].'
-            </a>
-            ';
-        }
+      foreach ($result as $course) {
+      echo '
+      <a href="'.$course["link"].'">
+      '.$course["icon"].'
+      '.$course["name"].'
+      </a>
+      ';
       }
       ?>
       <div class="dropdown">
@@ -26,7 +22,7 @@
           More
         </button>
         <ul class="dropdown-menu">
-          <li><a href="#" class="dropdown-item">Action</a></li>
+          <li><a href="#" class="dropdown-item">Help</a></li>
         </ul>
       </div>
       <button class="toggle-btn hide-lg" type="button" onclick="changeTheme()">

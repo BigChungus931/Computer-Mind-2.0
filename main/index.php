@@ -91,7 +91,7 @@ include "include/session.php";
         <h1 class="section-title">About website</h1>
         <p class="section-par">
           This website is about programming, it covers languages such as C++,
-          Python, Javascript, PHP/SQL, and web design. (HTML/CSS)
+          Python, Javascript, PHP/SQL, and web design (HTML/CSS).
         </p>
       </section>
     </div>
