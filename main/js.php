@@ -105,7 +105,7 @@ include "include/session.php";
       </div>
 
       <section class="about-section">
-        <h1 class="section-title">Javascript</h1>
+        <h1 class="section-title">JavaScript</h1>
         <p class="section-par">
           JavaScript is a high-level programming language which is primarily
           used to make websites dynamic and interactive. It executes in the web

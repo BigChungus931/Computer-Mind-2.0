@@ -1,20 +1,28 @@
 <div class="sidebar" id="sidebar" role="navigation" aria-label="Section navigation">
-      <?php
-      $sql = "SELECT name, icon, link FROM courses";
-      $result = $conn->query($sql);
-      foreach ($result as $course){
-        if ($course["name"] == "Python" && 1!=2){
-          continue;
-        } else {
-            echo '
-            <a href="'.$course["link"].'">
-            '.$course["icon"].'
-            '.$course["name"].'
-            </a>
-            ';
-        }
-      }
-      ?>
+      <a href="index.php">
+        <i class="fas fa-home"></i>
+        Home
+      </a>
+      <a href="js.php">
+        <i class="fab fa-js"></i>
+        Javascript</a
+      >
+      <a href="python.php">
+        <i class="fab fa-python"></i>
+        Python</a
+      >
+      <a href="webdesign.php">
+        <i class="fab fa-html5"></i>
+        Web design</a
+      >
+      <a href="php_sql.php">
+        <i class="fab fa-php"></i>
+        PHP&SQL</a
+      >
+      <a href="c++.php">
+        <i class="fas fa-code"></i>
+        C++</a
+      >
       <div class="dropdown">
         <button
           class="btn btn-secondary dropdown-toggle"
