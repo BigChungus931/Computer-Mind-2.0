@@ -11,6 +11,7 @@ include "include/session.php";
       echo $_SESSION['firstname'];
       ?>
     </title>
+    <link href="img/favicon.png" rel="icon"> 
     <script src="js/load.js"></script>
     <link rel="stylesheet" href="Bootstrap/bootstrap.css" />
     <link rel="stylesheet" href="css/style.css" />

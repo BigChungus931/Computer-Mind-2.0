@@ -7,6 +7,7 @@ include "include/session.php";
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Computer Mind</title>
+    <link href="img/favicon.png" rel="icon"> 
     <script src="js/load.js"></script>
     <link rel="stylesheet" href="Bootstrap/bootstrap.css" />
     <link rel="stylesheet" href="css/style.css" />
