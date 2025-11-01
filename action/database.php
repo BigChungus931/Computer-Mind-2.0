@@ -11,7 +11,7 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
 
 if (isset($_POST["signup"])) {
     $conn = new mysqli($server, $username, $password, $database);
-    if ($conn->connect_error){
+    if ($conn->connect_error) {
         die("Connection error");
     } else {
         $firstname = $_POST["fname"];
@@ -51,7 +51,7 @@ if (isset($_POST["signup"])) {
 }
 if (isset($_POST["login"])) {
     $conn = new mysqli($server, $username, $password, $database);
-    if ($conn->connect_error){
+    if ($conn->connect_error) {
         die("Connection error");
     } else {
         $email = $_POST["email"];
@@ -61,7 +61,7 @@ if (isset($_POST["login"])) {
         $check->bind_param("s", $email);
         $check->execute();
         $result = $check->get_result();
-        if ($result->num_rows>0) {
+        if ($result->num_rows > 0) {
             $user = $result->fetch_assoc();
             if ($password == $user["Password"]) {
                 session_start();
@@ -73,11 +73,10 @@ if (isset($_POST["login"])) {
                 header("Location: main/index.php");
                 exit();
             } else {
-                 include "errors/invalid_user.php";
+                include "errors/invalid_user.php";
             }
         } else {
             include "errors/invalid_user.php";
         }
     }
 }
-?>
