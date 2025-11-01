@@ -36,7 +36,7 @@ include "action/database.php";
     }
 
     .gradient-custom-1 {
-      background: rgb(66, 66, 66);
+      background: rgba(42, 42, 42, 1);
     }
 
     @media (min-width: 768px) {
@@ -96,11 +96,8 @@ include "action/database.php";
             <div class="row g-0">
               <div class="col-lg-6 gradient-custom-1">
                 <div class="card-body p-md-5 mx-md-4">
-                  <div class="text-center">
-                    <img src="/img/darkthemelogo2.png" alt="" width="285px" />
-                    <h4 class="mt-2 mb-5 pb-1">
-                      The Computer Mind Team
-                    </h4>
+                  <div class="text-center mb-5">
+                    <img src="main/img/Computer-logo-dark.png" alt="" width="285px" />
                   </div>
 
                   <form action="" method="post">
@@ -153,9 +150,7 @@ include "action/database.php";
               <div
                 class="col-lg-6 d-flex align-items-center gradient-custom-2">
                 <div class="text-white px-3 py-4 p-md-5 mx-md-4">
-                  <p class="small mb-0">
-                    We are an online platform dedicated to helping beginners learn the fundamentals of coding. Through interactive lessons, practical projects, and easy beginner courses, we make it easy for anyone to start their journey into programming.
-                  </p>
+                  <img src="main/img/guy.png" alt="Guy" width="350px" style="margin-left:1.7em;" />
                 </div>
               </div>
             </div>
