@@ -49,7 +49,7 @@ function changeTheme() {
     case "light":
       newTheme = "dark";
       if (newTheme === "dark") {
-        img.src = "img/darkthemelogo2.png";
+        img.src = "img/Computer-logo-dark.PNG";
       }
       break;
 

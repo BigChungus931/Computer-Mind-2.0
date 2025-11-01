@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const html = document.documentElement;
   const img = document.getElementById("theme-image");
   if (html.getAttribute("data-theme") === "dark") {
-    img.src = "img/darkthemelogo1.PNG";
+    img.src = "img/Computer-logo-dark.PNG";
   } else {
     img.src = "img/Computer-logo.PNG";
   }
