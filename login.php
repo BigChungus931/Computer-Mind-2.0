@@ -9,6 +9,8 @@ include "action/database.php";
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Computer Mind Login</title>
   <link href="main/img/favicon.png" rel="icon">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
   <link rel="stylesheet" href="Bootstrap/bootstrap.css" />
   <!-- Material Design Bootstrap CSS -->
   <link
@@ -162,3 +164,6 @@ include "action/database.php";
 </body>
 
 </html>
+<?php
+include "include/bootstrap_js.php";
+?>
