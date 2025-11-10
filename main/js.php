@@ -122,7 +122,9 @@ include "include/session.php";
             Variables, data types, and operators
           </button>
           <div class="acc-content">
-            <p></p>
+            <?php
+            include "courses/js/variables&datatypes/04_variables.php";
+            ?>
           </div>
         </div>
 
