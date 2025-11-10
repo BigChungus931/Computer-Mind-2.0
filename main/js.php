@@ -123,7 +123,9 @@ include "include/session.php";
           </button>
           <div class="acc-content">
             <?php
-            include "courses/js/variables&datatypes/04_variables.php";
+            include "courses/js/var_data_operator/04_variables.php";
+            include "courses/js/var_data_operator/05_datatypes.php";
+            include "courses/js/var_data_operator/06_operators.php";
             ?>
           </div>
         </div>
