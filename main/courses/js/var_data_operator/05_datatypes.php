@@ -1,4 +1,4 @@
-<h2>Data Types</h2>
+<h1>Data Types</h1>
 <p>JavaScript has several built-in data types:</p>
 <h5>Primitive Types</h5>
 

@@ -5,3 +5,8 @@
 
 <h2>Assignment Operators</h2>
 <img src="courses/js/var_data_operator/img/scr_14.png" width="900px" alt="Assignment">
+
+<h2>Comparison Operators</h2>
+<img src="courses/js/var_data_operator/img/scr_15.png" width="900px" alt="Comparison">
+
+<h5 style="margin: 1em 0;">Important: Always use === and !== instead of == and != to avoid unexpected type conversions.</h5>
