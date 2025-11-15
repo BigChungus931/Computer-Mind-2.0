@@ -3,9 +3,10 @@ document.documentElement.setAttribute("data-theme", savedTheme);
 document.addEventListener("DOMContentLoaded", () => {
   const html = document.documentElement;
   const img = document.getElementById("theme-image");
+  const base = "/Computer%20Mind/Computer-Mind-2.0/main/";
   if (html.getAttribute("data-theme") === "dark") {
-    img.src = "img/Computer-logo-dark.PNG";
-  } else {
-    img.src = "img/Computer-logo.PNG";
-  }
+    img.src = base + "img/Computer-logo-dark.PNG";
+} else {
+img.src = base + "img/Computer-logo.PNG";
+}
 });

@@ -3,8 +3,8 @@
         id="theme-image"
         class="logo"
         src="imgs/Computer-logo.PNG"
-        alt="Computer mind logo" />  
-    
+        alt="Computer mind logo" />
+
     <div class="nav-right">
         <div class="dropdown">
             <button class="icon-btn user-toggle dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Account menu">
@@ -12,27 +12,27 @@
                 <span class="user-label"><span class="hide-sm">Welcome <?php echo $_SESSION['firstname']; ?></span></span>
             </button>
             <ul class="dropdown-menu dropdown-menu-end">
-                <?php 
+                <?php
                 if ($auth_user["Role"] == "admin") {
                     echo '
-                    <li><a href="" class="dropdown-item">Admin Panel</a></li>
-                    <li><a href="" class="dropdown-item">View Users</a></li>
-                    <li><a href="" class="dropdown-item">My Profile</a></li>
+                    <li><a href="' . BASE_URL . 'Panel/admin.php" class="dropdown-item">Admin Panel</a></li>
+                    <li><a href="' . BASE_URL . 'Panel/viewuser.php" class="dropdown-item">View Users</a></li>
+                    <li><a href="' . BASE_URL . 'Panel/profile.php" class="dropdown-item">My Profile</a></li>
                     ';
                 } else if ($auth_user["Role"] == "superadmin") {
                     echo '
-                    <li><a href="" class="dropdown-item superadmin">Superadmin Panel</a></li>
-                    <li><a href="" class="dropdown-item">View Admin</a></li>
-                    <li><a href="" class="dropdown-item">View User</a></li>
-                    <li><a href="" class="dropdown-item">My Profile</a></li>
+                    <li><a href="' . BASE_URL . 'Panel/superadmin.php" class="dropdown-item superadmin">Superadmin Panel</a></li>
+                    <li><a href="' . BASE_URL . 'Panel/viewadmin.php" class="dropdown-item">View Admin</a></li>
+                    <li><a href="' . BASE_URL . 'Panel/viewuser.php" class="dropdown-item">View User</a></li>
+                    <li><a href="' . BASE_URL . 'Panel/profile.php" class="dropdown-item">My Profile</a></li>
                     ';
                 } else if ($auth_user["Role"] == "user") {
                     echo '
-                    <li><a href="" class="dropdown-item">My Profile</a></li>
+                    <li><a href="' . BASE_URL . 'Panel/profile.php" class="dropdown-item">My Profile</a></li>
                     ';
                 }
                 ?>
-                <li><a href="?action=logout" class="dropdown-item">Logout</a></li>
+                <li><a href="<?php echo BASE_URL ?>?action=logout" class="dropdown-item">Logout</a></li>
             </ul>
         </div>
 
