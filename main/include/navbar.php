@@ -1,12 +1,10 @@
 <nav class="navbar" role="banner">
-    <?php
-    echo '
-        <img
+    <img
         id="theme-image"
         class="logo"
-        src="' . $dots . 'imgs/Computer-logo.PNG"
-        alt="Computer mind logo" /> ';
-    ?>
+        src="imgs/Computer-logo.PNG"
+        alt="Computer mind logo" />  
+    
     <div class="nav-right">
         <div class="dropdown">
             <button class="icon-btn user-toggle dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Account menu">
@@ -14,12 +12,12 @@
                 <span class="user-label"><span class="hide-sm">Welcome <?php echo $_SESSION['firstname']; ?></span></span>
             </button>
             <ul class="dropdown-menu dropdown-menu-end">
-                <?php
+                <?php 
                 if ($auth_user["Role"] == "admin") {
                     echo '
-                    <li><a href="' . $panel . 'admin.php" class="dropdown-item">Admin Panel</a></li>
+                    <li><a href="" class="dropdown-item">Admin Panel</a></li>
                     <li><a href="" class="dropdown-item">View Users</a></li>
-                    <li><a href="' . $panel . 'profile.php" class="dropdown-item">My Profile</a></li>
+                    <li><a href="" class="dropdown-item">My Profile</a></li>
                     ';
                 } else if ($auth_user["Role"] == "superadmin") {
                     echo '

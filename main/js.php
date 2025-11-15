@@ -18,8 +18,6 @@ include "include/session.php";
 
 <body>
   <?php
-  $dots = "";
-  $panel = "Panel/";
   include "include/navbar.php";
   include "include/sidebar.php";
   ?>

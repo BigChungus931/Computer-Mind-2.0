@@ -9,4 +9,4 @@
 <h2>Comparison Operators</h2>
 <img src="courses/js/var_data_operator/img/scr_15.png" width="900px" alt="Comparison">
 
-<p style="margin: 1em 0;">Important: Always use === and !== instead of == and != to avoid unexpected type conversions.</p>
+<h5 style="margin: 1em 0;">Important: Always use === and !== instead of == and != to avoid unexpected type conversions.</h5>
