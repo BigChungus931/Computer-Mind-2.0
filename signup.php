@@ -7,7 +7,7 @@ include "action/database.php";
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Computer Mind Login</title>
+  <title>Computer Mind Signup</title>
   <link href="main/img/favicon.png" rel="icon">
   <link href="css/style.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
@@ -75,12 +75,48 @@ include "action/database.php";
       transition: 2s !important;
     }
 
-    .form-control {
+    /* Fixed floating label styles */
+    .form-outline {
+      position: relative;
+      margin-bottom: 1.5rem;
+    }
+    
+    .form-outline .form-control,
+    .form-outline .form-select {
+      padding: 15px 10px 5px 10px;
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 4px;
       color: white !important;
     }
-
-    .form-label {
-      color: white !important;
+    
+    .form-outline .form-control:focus,
+    .form-outline .form-select:focus {
+      outline: none;
+      border-color: #ee7724;
+      box-shadow: 0 0 0 0.2rem rgba(238, 119, 36, 0.25);
+    }
+    
+    .form-outline .form-label {
+      position: absolute;
+      top: 15px;
+      left: 10px;
+      transition: all 0.2s ease;
+      pointer-events: none;
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.7) !important;
+    }
+    
+    .form-outline .form-control:focus ~ .form-label,
+    .form-outline .form-control:not(:placeholder-shown) ~ .form-label,
+    .form-outline .form-select:focus ~ .form-label,
+    .form-outline .form-select:valid ~ .form-label {
+      top: -10px;
+      left: 10px;
+      font-size: 12px;
+      background: rgba(42, 42, 42, 1);
+      padding: 0 5px;
+      color: #ee7724 !important;
     }
 
     .text-muted {
@@ -89,6 +125,9 @@ include "action/database.php";
 
     .countries option {
       color: black !important;
+    }
+    .mtt{
+      margin-top:26px !important;
     }
   </style>
 </head>
@@ -109,36 +148,40 @@ include "action/database.php";
                   <form action="" method="post">
                     <p>Please make an account</p>
 
-                    <div class="form-outline mb-4" data-mdb-input-init>
-                      <input type="text" id="fnameid" class="form-control" name="fname" placeholder="Enter Firstname" required>
+                    <div class="form-outline mb-4 mtt">
+                      <input type="text" id="fnameid" class="form-control" name="fname" placeholder=" " required>
                       <label for="fnameid" class="form-label">Firstname</label>
                     </div>
 
-                    <div class="form-outline mb-4" data-mdb-input-init>
-                      <input type="text" id="lnameid" class="form-control" name="lname" placeholder="Enter Lastname" required>
+                    <div class="form-outline mb-4 mtt">
+                      <input type="text" id="lnameid" class="form-control" name="lname" placeholder=" " required>
                       <label for="lnameid" class="form-label">Lastname</label>
                     </div>
-                    <div class="form-outline mb-4" data-mdb-input-init>
-                      <input type="email" id="email" class="form-control" name="email" placeholder="Enter Email" required>
+
+                    <div class="form-outline mb-4 mtt">
+                      <input type="email" id="email" class="form-control" name="email" placeholder=" " required>
                       <label for="email" class="form-label">Email</label>
                     </div>
-                    <div class="form-outline mb-4" data-mdb-input-init>
-                      <input type="number" id="age" class="form-control" min="12" max="140" name="age" placeholder="Enter Age" required>
+
+                    <div class="form-outline mb-4 mtt">
+                      <input type="number" id="age" class="form-control" min="12" max="140" name="age" placeholder=" " required>
                       <label for="age" class="form-label">Age</label>
                     </div>
-                    <div class="form-outline mb-4" data-mdb-input-init>
+
+                    <div class="form-outline mb-4">
                       <?php
                       include "include/countries.php";
                       ?>
                     </div>
-                    <div class="form-outline mb-4" data-mdb-input-init>
-                      <input type="password" id="pwd" class="form-control" name="pwd" placeholder="Enter Password" required>
+
+                    <div class="form-outline mb-4">
+                      <input type="password" id="pwd" class="form-control" name="pwd" placeholder=" " required>
                       <label for="pwd" class="form-label">Password</label>
                     </div>
 
-                    <div class="form-outline mb-4" data-mdb-input-init>
-                      <input type="password" id="cpwd" class="form-control" name="cpwd" placeholder="Confirm Password" required>
-                      <label for="cpwd" class="form-label"> Confirm Password</label>
+                    <div class="form-outline mb-4">
+                      <input type="password" id="cpwd" class="form-control" name="cpwd" placeholder=" " required>
+                      <label for="cpwd" class="form-label">Confirm Password</label>
                     </div>
 
                     <div class="text-center pt-1 mb-5 pb-1">

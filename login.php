@@ -75,16 +75,51 @@ include "action/database.php";
       transition: 2s !important;
     }
 
-    .form-control {
+    /* Fixed floating label styles */
+    .form-outline {
+      position: relative;
+      margin-bottom: 1.5rem;
+    }
+    
+    .form-outline .form-control {
+      padding: 15px 10px 5px 10px;
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 4px;
       color: white !important;
     }
-
-    .form-label {
-      color: white !important;
+    
+    .form-outline .form-control:focus {
+      outline: none;
+      border-color: #ee7724;
+      box-shadow: 0 0 0 0.2rem rgba(238, 119, 36, 0.25);
+    }
+    
+    .form-outline .form-label {
+      position: absolute;
+      top: 15px;
+      left: 10px;
+      transition: all 0.2s ease;
+      pointer-events: none;
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.7) !important;
+    }
+    
+    .form-outline .form-control:focus ~ .form-label,
+    .form-outline .form-control:not(:placeholder-shown) ~ .form-label {
+      top: -10px;
+      left: 10px;
+      font-size: 12px;
+      background: rgba(42, 42, 42, 1);
+      padding: 0 5px;
+      color: #ee7724 !important;
     }
 
     .text-muted {
       color: whitesmoke !important;
+    }
+     .mtt{
+      margin-top:28px !important;
     }
   </style>
 </head>
@@ -103,25 +138,26 @@ include "action/database.php";
                   </div>
 
                   <form action="" method="post">
-                    <p>Please login to your account</p>
-                    <div class="form-outline mb-4" data-mdb-input-init>
+                    <p class="">Please login to your account</p>
+                    
+                    <div class="form-outline mtt">
                       <input
                         type="email"
                         name="email"
                         id="form2Example11"
                         class="form-control"
-                        placeholder="Enter email address"
+                        placeholder=" "
                         required />
                       <label for="form2Example11" class="form-label">Email</label>
                     </div>
 
-                    <div class="form-outline mb-4" data-mdb-input-init>
+                    <div class="form-outline mb-4 mtt">
                       <input
                         type="password"
                         name="pwd"
                         id="form2Example22"
                         class="form-control"
-                        placeholder="Enter Your password"
+                        placeholder=" "
                         required />
                       <label for="form2Example22" class="form-label">Password</label>
                     </div>
