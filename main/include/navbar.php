@@ -2,7 +2,7 @@
     <img
         id="theme-image"
         class="logo"
-        src="imgs/Computer-logo.PNG"
+        src="<?php echo BASE_URL ?>img/Computer-logo.PNG"
         alt="Computer mind logo" />
 
     <div class="nav-right">

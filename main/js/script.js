@@ -44,19 +44,20 @@ function changeTheme() {
   const html = document.documentElement; //<html lang="en" data-theme="dark">
   const currentTheme = html.getAttribute("data-theme"); //data-theme="dark"
   const img = document.getElementById("theme-image");
+  const base = "/Computer%20Mind/Computer-Mind-2.0/main/";
   let newTheme;
   switch (currentTheme) {
     case "light":
       newTheme = "dark";
       if (newTheme === "dark") {
-        img.src = "img/Computer-logo-dark.PNG";
+        img.src = base + "img/Computer-logo-dark.PNG";
       }
       break;
 
     case "dark":
       newTheme = "light";
       if (newTheme === "light") {
-        img.src = "img/Computer-logo.png";
+        img.src = base + "img/Computer-logo.png";
       }
       break;
 

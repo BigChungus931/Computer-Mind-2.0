@@ -24,11 +24,43 @@ include "../include/session.php";
   ?>
   <div class="main-content">
     <section class="about-section">
-      <h1 class="section-title">View Admin</h1>
-      <p class="section-par">
-        View admins
-      </p>
+      <h1 class="section-title">View Admins</h1>
     </section>
+    <table class="table table-hover container">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Email</th>
+          <th scope="col">Age</th>
+          <th scope="col">Country</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <?php
+        $admins = "SELECT Firstname, Lastname, Email, Age, Country FROM users WHERE Role='admin'";
+        $admin_result = $conn->query($admins);
+        foreach ($admin_result as $admin) {
+          echo '
+      <tr>
+          <th scope="row">1</th>
+          <td>' . $admin["Firstname"] . '</td>
+          <td>' . $admin["Lastname"] . '</td>
+          <td>' . $admin["Email"] . '</td>
+          <td>' . $admin["Age"] . '</td>
+          <td>' . $admin["Country"] . '</td>
+          <td>
+          <a href="" class="btn btn-info">Edit</a>
+          <a href="" class="btn btn-danger">Delete</a>
+          </td>
+        </tr>
+      ';
+        }
+        ?>
+      </tbody>
+    </table>
   </div>
 </body>
 

@@ -23,12 +23,47 @@ include "../include/session.php";
   include "../include/sidebar.php";
   ?>
   <div class="main-content">
-    <section class="about-section">
-      <h1 class="section-title">View User</h1>
-      <p class="section-par">
-        View users
-      </p>
+    <section class="about-section mb-5">
+      <h1 class="section-title">View Users</h1>
     </section>
+    <table class="table table-hover container">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Email</th>
+          <th scope="col">Age</th>
+          <th scope="col">Country</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <?php
+        $c = 1;
+        $users = "SELECT Firstname, Lastname, Email, Age, Country FROM users WHERE Role='user'";
+        $user_result = $conn->query($users);
+        foreach ($user_result as $user) {
+          echo '
+      <tr>
+          <th scope="row">' . $c . '</th>
+          <td>' . $user["Firstname"] . '</td>
+          <td>' . $user["Lastname"] . '</td>
+          <td>' . $user["Email"] . '</td>
+          <td>' . $user["Age"] . '</td>
+          <td>' . $user["Country"] . '</td>
+          <td>
+          <a href="" class="btn btn-info">Edit</a>
+          <a href="" class="btn btn-danger">Delete</a>
+          </td>
+        </tr>
+      ';
+          //C++ Reference
+          $c++;
+        }
+        ?>
+      </tbody>
+    </table>
   </div>
 </body>
 
