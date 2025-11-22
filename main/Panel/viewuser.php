@@ -7,7 +7,7 @@ include "../include/session.php";
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>View User</title>
+  <title>View Users</title>
   <link href="<?php echo BASE_URL ?>img/favicon.png" rel="icon">
   <link rel="stylesheet" href="<?php echo BASE_URL ?>Bootstrap/bootstrap.css" />
   <script src="<?php echo BASE_URL ?>js/load.js"></script>

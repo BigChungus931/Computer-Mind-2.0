@@ -7,7 +7,7 @@ include "../include/session.php";
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Profile</title>
+  <title>Root Panel</title>
   <link href="<?php echo BASE_URL ?>img/favicon.png" rel="icon">
   <link rel="stylesheet" href="<?php echo BASE_URL ?>Bootstrap/bootstrap.css" />
   <script src="<?php echo BASE_URL ?>js/load.js"></script>
@@ -23,8 +23,8 @@ include "../include/session.php";
   include "../include/sidebar.php";
   ?>
   <div class="main-content">
-    <section class="about-section">
-      <h1 class="section-title">Profile</h1>
+    <section class="about-section mb-5">
+      <h1 class="section-title">Root</h1>
     </section>
   </div>
 </body>

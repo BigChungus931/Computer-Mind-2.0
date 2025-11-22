@@ -7,7 +7,7 @@ include "../include/session.php";
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>View Admins</title>
+  <title>View Superadmins</title>
   <link href="<?php echo BASE_URL ?>img/favicon.png" rel="icon">
   <link rel="stylesheet" href="<?php echo BASE_URL ?>Bootstrap/bootstrap.css" />
   <script src="<?php echo BASE_URL ?>js/load.js"></script>
@@ -24,7 +24,7 @@ include "../include/session.php";
   ?>
   <div class="main-content">
     <section class="about-section mb-5">
-      <h1 class="section-title">View Admins</h1>
+      <h1 class="section-title">View Superadmins</h1>
     </section>
     <table class="table table-hover container">
       <thead>
@@ -35,28 +35,40 @@ include "../include/session.php";
           <th scope="col">Email</th>
           <th scope="col">Age</th>
           <th scope="col">Country</th>
-          <th scope="col">Action</th>
+          <?php
+          if ($auth_user["Role"] == "root") {
+            echo ' <th scope="col">Action</th>';
+          }
+          ?>
         </tr>
       </thead>
       <tbody>
         <?php
-        $admins = "SELECT Firstname, Lastname, Email, Age, Country FROM users WHERE Role='admin'";
-        $admin_result = $conn->query($admins);
-        foreach ($admin_result as $admin) {
+        $c = 1;
+        $superadmins = "SELECT Firstname, Lastname, Email, Age, Country FROM users WHERE Role='superadmin'";
+        $superadmin_result = $conn->query($superadmins);
+        foreach ($superadmin_result as $superadmin) {
           echo '
       <tr>
-          <th scope="row">1</th>
-          <td>' . $admin["Firstname"] . '</td>
-          <td>' . $admin["Lastname"] . '</td>
-          <td>' . $admin["Email"] . '</td>
-          <td>' . $admin["Age"] . '</td>
-          <td>' . $admin["Country"] . '</td>
+          <th scope="row">' . $c . '</th>
+          <td>' . $superadmin["Firstname"] . '</td>
+          <td>' . $superadmin["Lastname"] . '</td>
+          <td>' . $superadmin["Email"] . '</td>
+          <td>' . $superadmin["Age"] . '</td>
+          <td>' . $superadmin["Country"] . '</td>
+        
+      ';
+          if ($auth_user["Role"] == "root") {
+            echo '
           <td>
           <a href="" class="btn btn-info">Edit</a>
           <a href="" class="btn btn-danger">Delete</a>
           </td>
-        </tr>
-      ';
+          </tr>
+          ';
+          }
+          //C++ Reference
+          $c++;
         }
         ?>
       </tbody>

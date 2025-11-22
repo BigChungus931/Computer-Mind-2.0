@@ -602,6 +602,10 @@ img, video, canvas, svg {
   }
 }
 
-.superadmin {
+.root {
   color: crimson !important;
+}
+
+.superadmin {
+  color: orange !important;
 }
