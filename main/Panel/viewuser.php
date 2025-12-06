@@ -41,7 +41,7 @@ include "../include/session.php";
       <tbody>
         <?php
         $c = 1;
-        $users = "SELECT Firstname, Lastname, Email, Age, Country FROM users WHERE Role='user'";
+        $users = "SELECT ID, Firstname, Lastname, Email, Age, Country FROM users WHERE Role='user'";
         $user_result = $conn->query($users);
         foreach ($user_result as $user) {
           echo '
@@ -53,7 +53,7 @@ include "../include/session.php";
           <td>' . $user["Age"] . '</td>
           <td>' . $user["Country"] . '</td>
           <td>
-          <a href="" class="btn btn-info">Edit</a>
+          <a href="edit.php?id=' . $user["ID"] . '" class="btn btn-info">Edit</a>
           <a href="" class="btn btn-danger">Delete</a>
           </td>
         </tr>

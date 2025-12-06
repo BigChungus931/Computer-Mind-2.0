@@ -45,7 +45,7 @@ include "../include/session.php";
       <tbody>
         <?php
         $c = 1;
-        $superadmins = "SELECT Firstname, Lastname, Email, Age, Country FROM users WHERE Role='superadmin'";
+        $superadmins = "SELECT ID, Firstname, Lastname, Email, Age, Country FROM users WHERE Role='superadmin'";
         $superadmin_result = $conn->query($superadmins);
         foreach ($superadmin_result as $superadmin) {
           echo '
@@ -61,7 +61,7 @@ include "../include/session.php";
           if ($auth_user["Role"] == "root") {
             echo '
           <td>
-          <a href="" class="btn btn-info">Edit</a>
+          <a href="edit.php?id=' . $superadmin["ID"] . '" class="btn btn-info">Edit</a>
           <a href="" class="btn btn-danger">Delete</a>
           </td>
           </tr>

@@ -40,7 +40,7 @@ include "../include/session.php";
       </thead>
       <tbody>
         <?php
-        $admins = "SELECT Firstname, Lastname, Email, Age, Country FROM users WHERE Role='admin'";
+        $admins = "SELECT ID, Firstname, Lastname, Email, Age, Country FROM users WHERE Role='admin'";
         $admin_result = $conn->query($admins);
         foreach ($admin_result as $admin) {
           echo '
@@ -52,7 +52,7 @@ include "../include/session.php";
           <td>' . $admin["Age"] . '</td>
           <td>' . $admin["Country"] . '</td>
           <td>
-          <a href="" class="btn btn-info">Edit</a>
+          <a href="edit.php?id=' . $admin["ID"] . '" class="btn btn-info">Edit</a>
           <a href="" class="btn btn-danger">Delete</a>
           </td>
         </tr>

@@ -32,7 +32,7 @@ if (isset($_POST["signup"])) {
         } else if ($age < 12) {
             include "errors/too_young.php";
         } else {
-            $sql = "INSERT INTO `users`(`Firstname`, `Lastname`, `Email`, `Password`, `Age`, `Country`, `Joined`) VALUES('$firstname', '$lastname', '$email', '$password', '$age', '$country', '1')";
+            $sql = "INSERT INTO `users`(`Firstname`, `Lastname`, `Email`, `Password`, `Age`, `Country`, `Joined`) VALUES('$firstname', '$lastname', '$email', '$password', '$age', '$country', NOW())";
 
             if ($conn->query($sql) == TRUE) {
                 session_start();
