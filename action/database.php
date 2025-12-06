@@ -68,6 +68,7 @@ if (isset($_POST["login"])) {
                 $_SESSION['user_id'] = $user["ID"];
                 $_SESSION['firstname'] = $user["Firstname"];
                 $_SESSION['lastname'] = $user["Lastname"];
+                $_SESSION['role'] = $user["Role"];
                 $_SESSION['email'] = $email;
                 $_SESSION['logged_in'] = true;
                 header("Location: main/index.php");
