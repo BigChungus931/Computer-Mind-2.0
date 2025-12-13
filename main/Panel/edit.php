@@ -38,7 +38,7 @@ include "../include/session.php";
       <h1 class="section-title">Edit <?php echo $user["Firstname"] . " " . $user["Lastname"] ?></h1>
     </section>
     <div class="container">
-      <form method="POST" action="update.php">
+      <form method="POST" action="../include/update.php">
         <input type="hidden" name="id" value="<?php echo $user['ID']; ?>">
 
         <div class="row">
@@ -64,8 +64,13 @@ include "../include/session.php";
         </div>
 
         <div class="mb-3">
-          <label for="country" class="form-label">Country</label>
-          <input type="text" class="form-control" id="country" name="country" value="<?php echo htmlspecialchars($user['Country']); ?>">
+          <div class="col-md-12 mb-3">
+            <label for="role" class="form-label">Country</label>
+            <select id="country" name="country" class="form-control">
+              <?php include "../../include/countries.php"; ?>
+            </select>
+
+          </div>
         </div>
 
         <div class="row">

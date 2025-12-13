@@ -80,7 +80,7 @@ include "action/database.php";
       position: relative;
       margin-bottom: 1.5rem;
     }
-    
+
     .form-outline .form-control,
     .form-outline .form-select {
       padding: 15px 10px 5px 10px;
@@ -89,14 +89,14 @@ include "action/database.php";
       border-radius: 4px;
       color: white !important;
     }
-    
+
     .form-outline .form-control:focus,
     .form-outline .form-select:focus {
       outline: none;
       border-color: #ee7724;
       box-shadow: 0 0 0 0.2rem rgba(238, 119, 36, 0.25);
     }
-    
+
     .form-outline .form-label {
       position: absolute;
       top: 15px;
@@ -106,11 +106,11 @@ include "action/database.php";
       font-size: 16px;
       color: rgba(255, 255, 255, 0.7) !important;
     }
-    
-    .form-outline .form-control:focus ~ .form-label,
-    .form-outline .form-control:not(:placeholder-shown) ~ .form-label,
-    .form-outline .form-select:focus ~ .form-label,
-    .form-outline .form-select:valid ~ .form-label {
+
+    .form-outline .form-control:focus~.form-label,
+    .form-outline .form-control:not(:placeholder-shown)~.form-label,
+    .form-outline .form-select:focus~.form-label,
+    .form-outline .form-select:valid~.form-label {
       top: -10px;
       left: 10px;
       font-size: 12px;
@@ -126,8 +126,9 @@ include "action/database.php";
     .countries option {
       color: black !important;
     }
-    .mtt{
-      margin-top:26px !important;
+
+    .mtt {
+      margin-top: 26px !important;
     }
   </style>
 </head>
@@ -169,9 +170,11 @@ include "action/database.php";
                     </div>
 
                     <div class="form-outline mb-4">
-                      <?php
-                      include "include/countries.php";
-                      ?>
+                      <select name="country" class="form-control countries" id="country" required>
+                        <?php
+                        include "include/countries.php";
+                        ?>
+                      </select>
                     </div>
 
                     <div class="form-outline mb-4">
