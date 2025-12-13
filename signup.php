@@ -171,6 +171,7 @@ include "action/database.php";
 
                     <div class="form-outline mb-4">
                       <select name="country" class="form-control countries" id="country" required>
+                        <option value="" disabled selected hidden>Select Your Country</option>
                         <?php
                         include "include/countries.php";
                         ?>

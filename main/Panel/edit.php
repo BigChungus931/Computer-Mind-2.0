@@ -59,7 +59,7 @@ include "../include/session.php";
           </div>
           <div class="col-md-6 mb-3">
             <label for="age" class="form-label">Age</label>
-            <input type="number" class="form-control" id="age" name="age" value="<?php echo $user['Age']; ?>">
+            <input type="number" class="form-control" id="age" min="12" max="150" name="age" value="<?php echo $user['Age']; ?>">
           </div>
         </div>
 
@@ -67,6 +67,7 @@ include "../include/session.php";
           <div class="col-md-12 mb-3">
             <label for="role" class="form-label">Country</label>
             <select id="country" name="country" class="form-control">
+              <option value="<?php echo $user['Country'] ?>" selected><?php echo $user['Country'] ?></option>
               <?php include "../../include/countries.php"; ?>
             </select>
 

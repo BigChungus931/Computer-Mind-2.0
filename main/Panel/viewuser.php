@@ -41,7 +41,7 @@ include "../include/session.php";
       <tbody>
         <?php
         $c = 1;
-        $users = "SELECT ID, Firstname, Lastname, Email, Age, Country FROM users WHERE Role='user'";
+        $users = "SELECT ID, Firstname, Lastname, Email, Age, Country FROM users WHERE Role='user' ORDER BY Firstname ASC";
         $user_result = $conn->query($users);
         foreach ($user_result as $user) {
           echo '

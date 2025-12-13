@@ -42,4 +42,42 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $errors[] = "Password must be at least 8 characters";
         }
     }
+
+    if (empty($errors)) {
+        if (!empty($password)) {
+            $hashed_pwd = md5($password);
+            $sql = "
+            UPDATE users SET
+            Firstname='$firstname',
+            Lastname='$lastname',
+            Email='$email',
+            Age=$age,
+            Country='$country',
+            Role='$role',
+            Password='$hashed_pwd'
+            WHERE ID=$id
+            ";
+        } else {
+            $sql = "
+            UPDATE users SET
+            Firstname='$firstname',
+            Lastname='$lastname',
+            Email='$email',
+            Age=$age,
+            Country='$country',
+            Role='$role'
+            WHERE ID=$id
+            ";
+        }
+
+        if (mysqli_query($conn, $sql)) {
+            $_SESSION["Success"] == "User Updated Successfully";
+            header("Location:../Panel/edit.php?id=" . $id);
+            exit();
+        } else {
+            $_SESSION["Error"] == "User Updated Unsuccessfully" . mysqli_error($conn);
+            header("Location:../Panel/edit.php?id=" . $id);
+            exit();
+        }
+    }
 }
