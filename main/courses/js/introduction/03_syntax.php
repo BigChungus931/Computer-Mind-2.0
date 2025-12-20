@@ -23,4 +23,4 @@
 
 <h2>Whitespace</h2>
 <p>JavaScript ignores extra spaces, tabs, and line breaks:</p>
-<img src="courses/js/introduction/img/scr_5.png" width="900px" style="margin-bottom: 2em;" alt="Whitespace">
+<img src="courses/js/introduction/img/scr_5.png" width="900px" style="margin-bottom: 20px" alt="Whitespace">

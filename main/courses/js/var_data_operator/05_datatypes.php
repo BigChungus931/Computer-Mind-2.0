@@ -6,7 +6,7 @@
 <img src="courses/js/var_data_operator/img/scr_7.png" width="900px" alt="String">
 
 <p>Number - Integers and decimals</p>
-<img src="courses/js/var_data_operator/img/scr_8.png" width="900px" alt="Integers and decimals">
+<img src="courses/js/var_data_operator/img/scr_8.png" width="900px" alt="Integers and Decimals">
 
 <p>Boolean - True or false values</p>
 <img src="courses/js/var_data_operator/img/scr_9.png" width="900px" alt="Boolean">

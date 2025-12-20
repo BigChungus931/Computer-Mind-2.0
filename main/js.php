@@ -126,6 +126,8 @@ include "include/session.php";
             include "courses/js/var_data_operator/04_variables.php";
             include "courses/js/var_data_operator/05_datatypes.php";
             include "courses/js/var_data_operator/06_operators.php";
+            include "courses/js/var_data_operator/07_strings.php";
+            include "courses/js/var_data_operator/08_practical.php";
             ?>
           </div>
         </div>
