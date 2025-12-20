@@ -16,6 +16,7 @@
                 if ($auth_user["Role"] == "admin") {
                     echo '
                     <li><a href="' . BASE_URL . 'Panel/admin.php" class="dropdown-item">Admin Panel</a></li>
+                    <li><a href="' . BASE_URL . 'Panel/viewadmin.php" class="dropdown-item">View Admins</a></li>
                     <li><a href="' . BASE_URL . 'Panel/viewuser.php" class="dropdown-item">View Users</a></li>
                     <li><a href="' . BASE_URL . 'Panel/profile.php" class="dropdown-item">My Profile</a></li>
                     <li><a href="' . BASE_URL . 'Panel/viewsuperadmin.php" class="dropdown-item">view Superadmins</a></li>

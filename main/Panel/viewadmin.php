@@ -35,11 +35,16 @@ include "../include/session.php";
           <th scope="col">Email</th>
           <th scope="col">Age</th>
           <th scope="col">Country</th>
-          <th scope="col">Action</th>
+          <?php
+          if ($auth_user["Role"] == "root" || $auth_user["Role"] == "superadmin") {
+            echo ' <th scope="col">Action</th>';
+          }
+          ?>
         </tr>
       </thead>
       <tbody>
         <?php
+        $c = 1;
         $admins = "SELECT ID, Firstname, Lastname, Email, Age, Country FROM users WHERE Role='admin'";
         $admin_result = $conn->query($admins);
         foreach ($admin_result as $admin) {
@@ -51,12 +56,18 @@ include "../include/session.php";
           <td>' . $admin["Email"] . '</td>
           <td>' . $admin["Age"] . '</td>
           <td>' . $admin["Country"] . '</td>
+           ';
+          if ($auth_user["Role"] == "root" || $auth_user["Role"] == "superadmin") {
+            echo '
           <td>
           <a href="edit.php?id=' . $admin["ID"] . '" class="btn btn-info">Edit</a>
-          <a href="" class="btn btn-danger">Delete</a>
+          <a href="../include/delete.php?id=' . $admin["ID"] . '" class="btn btn-danger">Delete</a>
           </td>
-        </tr>
-      ';
+          </tr>
+          ';
+          }
+          //C++ Reference
+          $c++;
         }
         ?>
       </tbody>

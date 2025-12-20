@@ -62,7 +62,7 @@ include "../include/session.php";
             echo '
           <td>
           <a href="edit.php?id=' . $superadmin["ID"] . '" class="btn btn-info">Edit</a>
-          <a href="" class="btn btn-danger">Delete</a>
+          <a href="../include/delete.php?id=' . $superadmin["ID"] . '" class="btn btn-danger">Delete</a>
           </td>
           </tr>
           ';

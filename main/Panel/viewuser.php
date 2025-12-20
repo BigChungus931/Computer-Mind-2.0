@@ -54,7 +54,7 @@ include "../include/session.php";
           <td>' . $user["Country"] . '</td>
           <td>
           <a href="edit.php?id=' . $user["ID"] . '" class="btn btn-info">Edit</a>
-          <a href="" class="btn btn-danger">Delete</a>
+          <a href="../include/delete.php?id=' . $user["ID"] . '" class="btn btn-danger">Delete</a>
           </td>
         </tr>
       ';
