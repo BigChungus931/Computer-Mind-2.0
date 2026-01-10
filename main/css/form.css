@@ -12,10 +12,10 @@
 }
 
 .container form {
-  background: white;
+  background: var(--body-color);
   padding: 40px;
   border-radius: 20px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.516);
 }
 
 .form-group {

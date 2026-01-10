@@ -53,6 +53,7 @@ include "../include/session.php";
           <td>' . $user["Age"] . '</td>
           <td>' . $user["Country"] . '</td>
           <td>
+          <a href="notifications.php?id=' . $user["ID"] . '" class="btn btn-success">Send Notifications</a>
           <a href="edit.php?id=' . $user["ID"] . '" class="btn btn-info">Edit</a>
           <a href="../include/delete.php?id=' . $user["ID"] . '" class="btn btn-danger">Delete</a>
           </td>
