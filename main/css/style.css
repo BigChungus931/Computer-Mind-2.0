@@ -126,11 +126,24 @@ body {
 }
 
 .theme-toggle {
+  position: relative;
   background: none;
   border: 1px solid var(--border-color);
   color: var(--font-color);
   border-radius: 8px;
   padding: 6px 10px;
+}
+
+.badgen {
+  position: absolute;
+  top: -8px;
+  right: -9px;
+  background-color: red !important;
+  color: white;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 12px;
 }
 
 .icon-btn {

@@ -50,9 +50,22 @@
         <button class="theme-toggle" type="button" aria-label="Switch theme" onclick="changeTheme()">
             <i class="fa-solid fa-moon"></i>
         </button>
+        <?php
+        $noti = "SELECT COUNT(*) AS count FROM notifications WHERE user_id=?";
+        $noti_stmt = $conn->prepare($noti);
+        $noti_stmt->bind_param("i", $id);
+        $noti_stmt->execute();
+        $noti_result = $noti_stmt->get_result();
+        $noti_row = $noti_result->fetch_assoc();
+        ?>
 
         <button class="theme-toggle" type="button">
             <i class="fa-solid fa-bell"></i>
+            <?php
+            if ($noti_row["count"] > 0) {
+                echo ' <span class="badgen">' . $noti_row["count"] . '</span>';
+            }
+            ?>
         </button>
 
         <button class="hamburger" aria-controls="sidebar" aria-expanded="false" onclick="hamburgerf()">≣</button>
