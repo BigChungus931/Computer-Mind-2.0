@@ -639,7 +639,7 @@ img, video, canvas, svg {
   margin-bottom: 50px;
 }
 
-table {
+.table {
   background-color: var(--body-color) !important;
   color: var(--font-color) !important;
 }
