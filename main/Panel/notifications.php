@@ -38,9 +38,9 @@ include "../include/session.php";
       <h1 class="section-title">To <?php echo $user["Firstname"] . " " . $user["Lastname"] ?></h1>
     </section>
     <div class="container">
-      <form method="POST" action="../include/update.php">
+      <form method="POST" action="../include/notify.php">
         <input type="hidden" name="id" value="<?php echo $user['ID']; ?>">
-        <textarea name="" id="" class="notification" col="10"></textarea>
+        <textarea name="message" id="" class="notification" col="10"></textarea>
         <button type="submit" class="btn btn-primary">Send Notification</button>
       </form>
     </div>
