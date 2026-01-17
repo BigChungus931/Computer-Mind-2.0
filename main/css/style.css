@@ -647,3 +647,49 @@ table {
  --bs-table-hover-color: var(--table-hover) !important;
 
 }
+
+/* Notification styles */
+.notifycard {
+  background-color: white;
+  width: 100%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  padding: 25px;
+  border-left: 1px solid rgb(0, 157, 255);
+  margin-top: 10px;
+}
+
+.notify-section {
+  padding-top: 3rem;
+  width: min(1300px, 92vw);
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header img {
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+}
+
+.sub-header {
+  padding-left: 70px;
+}
+
+.sub-header p {
+  text-align: left;
+}
+
+.sub-header span {
+  text-align: left;
+  font-size: 11px;
+  color: grey;
+  display: flex;
+  align-items: left;
+}

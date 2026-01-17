@@ -59,14 +59,14 @@
         $noti_row = $noti_result->fetch_assoc();
         ?>
 
-        <button class="theme-toggle" type="button">
+        <a href="<?php echo BASE_URL ?>Panel/view_notification.php" class="theme-toggle" type="button">
             <i class="fa-solid fa-bell"></i>
             <?php
             if ($noti_row["count"] > 0) {
                 echo ' <span class="badgen">' . $noti_row["count"] . '</span>';
             }
             ?>
-        </button>
+        </a>
 
         <button class="hamburger" aria-controls="sidebar" aria-expanded="false" onclick="hamburgerf()">≣</button>
 
