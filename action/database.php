@@ -19,6 +19,7 @@ if (isset($_POST["signup"])) {
         $email = $_POST["email"];
         $age = (int)$_POST["age"];
         $country = $_POST["country"];
+        $gender = $_POST["gender"];
         $raw_password = $_POST["pwd"];
         $password = md5($_POST["pwd"]);
         $confirmpassword = md5($_POST["cpwd"]);
@@ -32,13 +33,14 @@ if (isset($_POST["signup"])) {
         } else if ($age < 12) {
             include "errors/too_young.php";
         } else {
-            $sql = "INSERT INTO `users`(`Firstname`, `Lastname`, `Email`, `Password`, `Age`, `Country`, `Joined`) VALUES('$firstname', '$lastname', '$email', '$password', '$age', '$country', NOW())";
+            $sql = "INSERT INTO `users`(`Firstname`, `Lastname`, `Email`, `Password`, `Age`, `Country`, `Gender`, `Joined`) VALUES('$firstname', '$lastname', '$email', '$password', '$age', '$country', '$gender', NOW())";
 
             if ($conn->query($sql) == TRUE) {
                 session_start();
                 $_SESSION['user_id'] = $conn->insert_id;
                 $_SESSION['firstname'] = $firstname;
                 $_SESSION['email'] = $email;
+                $_SESSION['gender'] = $gender;
                 $_SESSION['logged_in'] = true;
                 header("Location: main/index.php");
                 exit();
@@ -69,6 +71,7 @@ if (isset($_POST["login"])) {
                 $_SESSION['firstname'] = $user["Firstname"];
                 $_SESSION['lastname'] = $user["Lastname"];
                 $_SESSION['role'] = $user["Role"];
+                $_SESSION['gender'] = $user["Gender"];
                 $_SESSION['email'] = $email;
                 $_SESSION['logged_in'] = true;
                 header("Location: main/index.php");

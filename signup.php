@@ -179,6 +179,15 @@ include "action/database.php";
                     </div>
 
                     <div class="form-outline mb-4">
+                      <select name="gender" class="form-control countries" id="gender" required>
+                        <option value="" disabled selected hidden>Select Your Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                      </select>
+                    </div>
+
+                    <div class="form-outline mb-4">
                       <input type="password" id="pwd" class="form-control" name="pwd" placeholder=" " required>
                       <label for="pwd" class="form-label">Password</label>
                     </div>

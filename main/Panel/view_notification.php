@@ -25,25 +25,29 @@ include "../include/session.php";
   <div class="main-content">
     <section class="notify-section">
       <h1 class="section-title">Notification</h1>
-      <?php
-      for ($i = 0; $i < 10; $i++) {
-      ?>
-        <div class="notifycard">
-          <div class="header">
-            <img src="https://static.vecteezy.com/system/resources/previews/019/896/008/original/male-user-avatar-icon-in-flat-design-style-person-signs-illustration-png.png" alt="">
-            <h5>
-              Dexter Schiller
-            </h5>
-          </div>
-          <div class="sub-header">
-            <p>
-              This is a notification detail page.
-            </p>
-            <span>10 minutes ago</span>
-          </div>
+      <div class="notifycard">
+        <div class="header">
+          <?php
+          if ($auth_user["Gender"] == "male") {
+            echo '<img src="https://static.vecteezy.com/system/resources/previews/019/896/008/original/male-user-avatar-icon-in-flat-design-style-person-signs-illustration-png.png" alt="">';
+          } else if ($auth_user["Gender"] == "female") {
+            echo '<img src="https://cdn1.iconfinder.com/data/icons/website-internet/48/website_-_female_user-1024.png" alt="">';
+          } else {
+            echo '<img src="https://tse1.mm.bing.net/th/id/OIP.xfzEU2lyX83UXOn6-bY0KQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" alt="">';
+          }
+          ?>
+          <h5>
+            Dexter Schiller
+          </h5>
         </div>
+        <div class="sub-header">
+          <p>
+            This is a notification detail page.
+          </p>
+          <span>10 minutes ago</span>
+        </div>
+      </div>
       <?php
-      }
       ?>
     </section>
   </div>
