@@ -626,6 +626,10 @@ img, video, canvas, svg {
 }
 
 .superadmin {
+  color: orangered !important;
+}
+
+.admin {
   color: orange !important;
 }
 

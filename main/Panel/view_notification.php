@@ -30,29 +30,57 @@ include "../include/session.php";
       $notify->bind_param("i", $id);
       $notify->execute();
       $notify_result = $notify->get_result();
+
+      $sender = $conn->prepare("SELECT * FROM users WHERE ID = ?");
       while ($notification = $notify_result->fetch_assoc()) {
+        $sender->bind_param("i", $notification["sender_id"]);
+        $sender->execute();
+        $sender_result = $sender->get_result();
+        $sender_info = $sender_result->fetch_assoc();
         echo '
           <div class="notifycard">
         <div class="header">
           ';
-        if ($auth_user["Gender"] == "male") {
+        if ($sender_info["Gender"] == "male") {
           echo '<img src="https://static.vecteezy.com/system/resources/previews/019/896/008/original/male-user-avatar-icon-in-flat-design-style-person-signs-illustration-png.png" alt="">';
-        } else if ($auth_user["Gender"] == "female") {
+        } else if ($sender_info["Gender"] == "female") {
           echo '<img src="https://cdn1.iconfinder.com/data/icons/website-internet/48/website_-_female_user-1024.png" alt="">';
         } else {
           echo '<img src="https://tse1.mm.bing.net/th/id/OIP.xfzEU2lyX83UXOn6-bY0KQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" alt="">';
         }
+        $time_diff = time() - strtotime($notification["created_at"]);
+        if ($time_diff < 60) {
+          $time_ago = $time_diff . ' seconds ago';
+          if ($time_ago == '1 seconds ago') {
+            $time_ago = '1 second ago';
+          }
+        } elseif ($time_diff < 3600) {
+          $time_ago = floor($time_diff / 60) . ' minutes ago';
+          if ($time_ago == '1 minutes ago') {
+            $time_ago = '1 minute ago';
+          }
+        } elseif ($time_diff < 86400) {
+          $time_ago = floor($time_diff / 3600) . ' hours ago';
+          if ($time_ago == '1 hours ago') {
+            $time_ago = '1 hour ago';
+          }
+        } else {
+          $time_ago = floor($time_diff / 86400) . ' days ago';
+          if ($time_ago == '1 days ago') {
+            $time_ago = '1 day ago';
+          }
+        }
 
         echo '
           <h5>
-            User
+            ' . $sender_info["Firstname"] . ' ' . $sender_info["Lastname"] . ' <sup>(<span class = "' . $sender_info["Role"] . '">' . $sender_info["Role"] . '</span>)</sup>
           </h5>
         </div>
         <div class="sub-header">
           <p>
             ' . $notification["message"] . '
           </p>
-          <span>' . time() - strtotime($notification["created_at"]) . ' seconds ago</span>
+          <span>' . $time_ago . '</span>
         </div>
       </div> ';
       }

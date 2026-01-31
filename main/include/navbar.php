@@ -15,7 +15,7 @@
                 <?php
                 if ($auth_user["Role"] == "admin") {
                     echo '
-                    <li><a href="' . BASE_URL . 'Panel/admin.php" class="dropdown-item">Admin Panel</a></li>
+                    <li><a href="' . BASE_URL . 'Panel/admin.php" class="dropdown-item admin">Admin Panel</a></li>
                     <li><a href="' . BASE_URL . 'Panel/viewadmin.php" class="dropdown-item">View Admins</a></li>
                     <li><a href="' . BASE_URL . 'Panel/viewuser.php" class="dropdown-item">View Users</a></li>
                     <li><a href="' . BASE_URL . 'Panel/profile.php" class="dropdown-item">My Profile</a></li>
@@ -51,7 +51,7 @@
             <i class="fa-solid fa-moon"></i>
         </button>
         <?php
-        $noti = "SELECT COUNT(*) AS count FROM notifications WHERE user_id=?";
+        $noti = "SELECT COUNT(*) AS count FROM notifications WHERE user_id=? AND seen='no'";
         $noti_stmt = $conn->prepare($noti);
         $noti_stmt->bind_param("i", $id);
         $noti_stmt->execute();
@@ -59,7 +59,7 @@
         $noti_row = $noti_result->fetch_assoc();
         ?>
 
-        <a href="<?php echo BASE_URL ?>Panel/view_notification.php" class="theme-toggle" type="button">
+        <a href="<?php echo BASE_URL ?>include/notify_reset.php?id=<?php echo $id ?>" class="theme-toggle" type="button">
             <i class="fa-solid fa-bell"></i>
             <?php
             if ($noti_row["count"] > 0) {
