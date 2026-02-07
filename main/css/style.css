@@ -691,6 +691,21 @@ table {
   padding-left: 70px;
 }
 
+.notify-action {
+  margin-top: -70px;
+  display: flex;
+  justify-content: right;
+  float: right;
+}
+
+.notify-action a {
+  text-decoration: none;
+  font-size: 24px;
+  color: crimson;
+  background: none;
+  border: none;
+}
+
 .sub-header p {
   text-align: left;
 }

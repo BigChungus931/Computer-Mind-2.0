@@ -82,7 +82,13 @@ include "../include/session.php";
           </p>
           <span>' . $time_ago . '</span>
         </div>
+        <div class="notify-action">
+          <a href="' . BASE_URL . 'include/notify_delete.php?id=' . $notification["id"] . '" class="btn btn-danger btn-sm">&times;</a>
+        </div>
       </div> ';
+      }
+      if ($notify_result->num_rows == 0) {
+        echo '<div class="alert alert-info">No notifications found.</div>';
       }
       ?>
     </section>
