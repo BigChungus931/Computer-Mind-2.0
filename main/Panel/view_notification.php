@@ -42,11 +42,11 @@ include "../include/session.php";
         <div class="header">
           ';
         if ($sender_info["Gender"] == "male") {
-          echo '<img src="https://static.vecteezy.com/system/resources/previews/019/896/008/original/male-user-avatar-icon-in-flat-design-style-person-signs-illustration-png.png" alt="">';
+          echo '<img src="Computer-Mind-2.0/main/img/Genders/male-user.png" alt="Male Avatar">';
         } else if ($sender_info["Gender"] == "female") {
-          echo '<img src="https://cdn1.iconfinder.com/data/icons/website-internet/48/website_-_female_user-1024.png" alt="">';
+          echo '<img src="Computer-Mind-2.0/main/img/Genders/female-user.png" alt="Female Avatar">';
         } else {
-          echo '<img src="https://tse1.mm.bing.net/th/id/OIP.xfzEU2lyX83UXOn6-bY0KQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" alt="">';
+          echo '<img src="Computer-Mind-2.0/main/img/Genders/other-user.png" alt="Other Avatar">';
         }
         $time_diff = time() - strtotime($notification["created_at"]);
         if ($time_diff < 60) {
