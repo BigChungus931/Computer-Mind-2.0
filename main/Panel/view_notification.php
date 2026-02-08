@@ -42,11 +42,11 @@ include "../include/session.php";
         <div class="header">
           ';
         if ($sender_info["Gender"] == "male") {
-          echo '<img src="Computer-Mind-2.0/main/img/Genders/male-user.png" alt="Male Avatar">';
+          echo '<img src="' . BASE_URL . 'img/Genders/male-user.png" alt="Male Avatar">';
         } else if ($sender_info["Gender"] == "female") {
-          echo '<img src="Computer-Mind-2.0/main/img/Genders/female-user.png" alt="Female Avatar">';
+          echo '<img src="' . BASE_URL . 'img/Genders/female-user.png" alt="Female Avatar">';
         } else {
-          echo '<img src="Computer-Mind-2.0/main/img/Genders/other-user.png" alt="Other Avatar">';
+          echo '<img src="' . BASE_URL . 'img/Genders/other-user.png" alt="Other Avatar">';
         }
         $time_diff = time() - strtotime($notification["created_at"]);
         if ($time_diff < 60) {
