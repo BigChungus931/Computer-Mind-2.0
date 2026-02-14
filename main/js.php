@@ -123,11 +123,11 @@ include "include/session.php";
           </button>
           <div class="acc-content">
             <?php
-            include "courses/js/var_data_operator/04_variables.php";
-            include "courses/js/var_data_operator/05_datatypes.php";
-            include "courses/js/var_data_operator/06_operators.php";
-            include "courses/js/var_data_operator/07_strings.php";
-            include "courses/js/var_data_operator/08_practical.php";
+            include "courses/js/var data operator/04_variables.php";
+            include "courses/js/var data operator/05_datatypes.php";
+            include "courses/js/var data operator/06_operators.php";
+            include "courses/js/var data operator/07_strings.php";
+            include "courses/js/var data operator/08_practical.php";
             ?>
           </div>
         </div>
@@ -137,7 +137,15 @@ include "include/session.php";
             Control structures (if/else, loops, switch)
           </button>
           <div class="acc-content">
-            <p></p>
+            <?php
+            include "courses/js/control structures/intro_control.php";
+            include "courses/js/control structures/02_if_statements.php";
+            include "courses/js/control structures/03_comparison.php";
+            include "courses/js/control structures/04_logical.php";
+            include "courses/js/control structures/05_truthy_falsy.php";
+            include "courses/js/control structures/06_ternary.php";
+            include "courses/js/control structures/07_switch.php";
+            ?>
           </div>
         </div>
 
