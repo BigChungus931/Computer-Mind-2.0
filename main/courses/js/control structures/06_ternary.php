@@ -214,8 +214,3 @@ let message = score >= 75 && !isCheating && studentAttended ?
     <li>Use parentheses to make complex ternaries clearer: <code>(x > 5) ? "yes" : "no"</code></li>
     <li>Don't use if the condition is confusing - readability matters!</li>
 </ul>
-
-<div class="navigation">
-    <a href="05_truthy_falsy.php">← Back to Truthy and Falsy</a>
-    <a href="07_switch.php">Continue to Switch Statements →</a>
-</div>

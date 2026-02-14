@@ -7,74 +7,10 @@
 
 <img src="courses/js/control%20structures/img/scr_3_comparison.png" width="900px" alt="Comparison Operators Overview">
 
-<pre><code class="language-javascript">
-let x = 10;
-let y = 5;
-
-// Greater than
-console.log(x > y);    // true
-console.log(y > x);    // false
-
-// Less than
-console.log(x < y);    // false
-console.log(y < x);    // true
-
-// Greater than or equal to
-console.log(x >= 10);  // true
-console.log(x >= 11);  // false
-
-// Less than or equal to
-console.log(x <= 10);  // true
-console.log(x <= 9);   // false
-            </code></pre>
-
-<h2>Equality Operators</h2>
-<p>Two main ways to check equality in JavaScript:</p>
-
-<img src="courses/js/control%20structures/img/scr_3_equality.png" width="900px" alt="Equality Operators">
-
-<pre><code class="language-javascript">
-let x = 10;
-let y = 5;
-
-// Loose equality (==) - converts types
-console.log(x == y);   // false
-
-// Strict equality (===) - checks type too
-console.log(x === y);  // false
-
-// Loose inequality (!=)
-console.log(x != y);   // true
-
-// Strict inequality (!==)
-console.log(x !== y);  // true
-            </code></pre>
-
 <h2>Strict vs Loose Equality</h2>
 <p>This is one of the most important concepts in JavaScript:</p>
 
 <img src="courses/js/control%20structures/img/scr_3_strict_loose.png" width="900px" alt="Strict vs Loose Equality">
-
-<pre><code class="language-javascript">
-let num = 5;
-let str = "5";
-
-// Loose equality (==) - converts types
-console.log(num == str);   // true (converts "5" to 5)
-
-// Strict equality (===) - checks type too
-console.log(num === str);  // false (different types)
-
-// More examples
-console.log(0 == false);      // true (loose)
-console.log(0 === false);     // false (strict)
-
-console.log("" == false);     // true (loose)
-console.log("" === false);    // false (strict)
-
-console.log(null == undefined);   // true (loose)
-console.log(null === undefined);  // false (strict)
-            </code></pre>
 
 <h2>Best Practice: Always Use === and !==</h2>
 <p><strong>Important:</strong> Always use strict equality (<code>===</code> and <code>!==</code>) to avoid unexpected type coercion and bugs.</p>
@@ -143,8 +79,3 @@ console.log(null === undefined);  // false (strict)
         <td>false</td>
     </tr>
 </table>
-
-<div class="navigation">
-    <a href="02_if_statements.php">← Back to If Statements</a>
-    <a href="04_logical.php">Continue to Logical Operators →</a>
-</div>

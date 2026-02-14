@@ -235,8 +235,3 @@ if (count !== 0) {
     <li>Be consistent - if some checks are explicit, make them all explicit</li>
     <li>Write comments if your truthy/falsy logic might be confusing</li>
 </ul>
-
-<div class="navigation">
-    <a href="04_logical.php">← Back to Logical Operators</a>
-    <a href="06_ternary.php">Continue to Ternary Operator →</a>
-</div>

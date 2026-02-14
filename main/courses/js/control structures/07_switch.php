@@ -313,8 +313,3 @@ switch (action) {
     <li>Remember: switch uses strict equality (===)</li>
     <li>Use if-else when conditions are complex or involve ranges</li>
 </ul>
-
-<div class="navigation">
-    <a href="06_ternary.php">← Back to Ternary Operator</a>
-    <a href="intro_control.php">Back to Introduction</a>
-</div>

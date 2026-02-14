@@ -193,8 +193,3 @@ if ((a || b) && c) {  // different meaning
     <li>Use meaningful variable names so conditions are self-documenting</li>
     <li>Avoid deeply nested logical operators</li>
 </ul>
-
-<div class="navigation">
-    <a href="03_comparison.php">← Back to Comparison Operators</a>
-    <a href="05_truthy_falsy.php">Continue to Truthy and Falsy →</a>
-</div>
