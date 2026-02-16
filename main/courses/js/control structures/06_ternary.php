@@ -24,30 +24,7 @@ condition ? valueIfTrue : valueIfFalse
 
 <img src="courses/js/control%20structures/img/scr_6_simple.png" width="900px" alt="Simple Ternary Example">
 
-<pre><code class="language-javascript">
-// Using if-else
-let age = 20;
-let status;
-
-if (age >= 18) {
-    status = "adult";
-} else {
-    status = "minor";
-}
-
-console.log(status);  // "adult"
-
-
-// Same thing with ternary
-let age = 20;
-let status = age >= 18 ? "adult" : "minor";
-
-console.log(status);  // "adult"
-            </code></pre>
-
 <h2>More Examples</h2>
-
-<img src="courses/js/control%20structures/img/scr_6_examples.png" width="900px" alt="Ternary Examples">
 
 <pre><code class="language-javascript">
 // Example 1: Check pass/fail
@@ -90,8 +67,6 @@ console.log(userType);  // "Adult"
             </code></pre>
 
 <h2>Ternary in Function Calls</h2>
-
-<img src="courses/js/control%20structures/img/scr_6_function.png" width="900px" alt="Ternary in Functions">
 
 <pre><code class="language-javascript">
 let age = 20;

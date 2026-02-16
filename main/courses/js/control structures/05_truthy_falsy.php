@@ -33,93 +33,10 @@ if (undefinedValue) { }   // This block WON'T run
 if (notANumber) { }       // This block WON'T run
             </code></pre>
 
-<h2>Practical Falsy Example</h2>
-
-<img src="courses/js/control%20structures/img/scr_5_falsy_example.png" width="900px" alt="Falsy Example">
-
-<pre><code class="language-javascript">
-let username = "";
-
-if (username) {
-    console.log(`Welcome, ${username}`);
-} else {
-    console.log("Please enter a username");
-}
-// Output: "Please enter a username"
-
-// Practical example with numbers
-let itemCount = 0;
-
-if (itemCount) {
-    console.log(`You have ${itemCount} items`);
-} else {
-    console.log("Your cart is empty");
-}
-// Output: "Your cart is empty"
-            </code></pre>
-
 <h2>Truthy Values</h2>
 <p><strong>Everything else is truthy</strong> in JavaScript:</p>
 
 <img src="courses/js/control%20structures/img/scr_5_truthy.png" width="900px" alt="Truthy Values">
-
-<pre><code class="language-javascript">
-// All truthy values (everything not falsy!):
-true         // The boolean true
-1            // Any non-zero number
-"hello"      // Any non-empty string
-[]           // Arrays (even empty!)
-{}           // Objects (even empty!)
-"0"          // String "0" is truthy!
-" "          // String with space is truthy!
-
-// Examples in conditions
-let trueValue = true;
-let number = 42;
-let message = "hello";
-let items = [];
-let person = {};
-
-if (trueValue) { }   // This block WILL run
-if (number) { }      // This block WILL run
-if (message) { }     // This block WILL run
-if (items) { }       // This block WILL run (even if empty!)
-if (person) { }      // This block WILL run (even if empty!)
-            </code></pre>
-
-<h2>Common Truthy/Falsy Gotchas</h2>
-
-<img src="courses/js/control%20structures/img/scr_5_gotchas.png" width="900px" alt="Truthy/Falsy Gotchas">
-
-<pre><code class="language-javascript">
-// IMPORTANT: Be careful with these!
-
-let arr = [];           // Empty array is TRUTHY!
-if (arr) {
-    console.log("This runs!");  // It runs!
-}
-
-// But to check if array is empty:
-if (arr.length) {
-    console.log("Array has items");
-} else {
-    console.log("Array is empty");  // This runs
-}
-
-// String "0" is truthy, not falsy!
-let zeroString = "0";
-if (zeroString) {
-    console.log("This runs!");  // It runs!
-}
-
-// Regular zero is falsy
-let zeroNumber = 0;
-if (zeroNumber) {
-    console.log("This won't run");
-} else {
-    console.log("Zero is falsy");  // This runs
-}
-            </code></pre>
 
 <h2>Using Logical Operators with Truthy/Falsy</h2>
 
