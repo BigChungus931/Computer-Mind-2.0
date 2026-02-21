@@ -3,19 +3,19 @@
 <h5>Primitive Types</h5>
 
 <p>String - Text data</p>
-<img src="courses/js/var_data_operator/img/scr_7.png" width="900px" alt="String">
+<img src="courses/js/var data operator/img/scr_7.png" width="900px" alt="String">
 
 <p>Number - Integers and decimals</p>
-<img src="courses/js/var_data_operator/img/scr_8.png" width="900px" alt="Integers and Decimals">
+<img src="courses/js/var data operator/img/scr_8.png" width="900px" alt="Integers and Decimals">
 
 <p>Boolean - True or false values</p>
-<img src="courses/js/var_data_operator/img/scr_9.png" width="900px" alt="Boolean">
+<img src="courses/js/var data operator/img/scr_9.png" width="900px" alt="Boolean">
 
 <p>Undefined - Variable declared but not assigned</p>
-<img src="courses/js/var_data_operator/img/scr_10.png" width="900px" alt="Undefined">
+<img src="courses/js/var data operator/img/scr_10.png" width="900px" alt="Undefined">
 
 <p>Null - Intentionally empty value</p>
-<img src="courses/js/var_data_operator/img/scr_11.png" width="900px" alt="Null">
+<img src="courses/js/var data operator/img/scr_11.png" width="900px" alt="Null">
 
 <p>Checking Data Types</p>
-<img src="courses/js/var_data_operator/img/scr_12.png" width="900px" alt="Check">
+<img src="courses/js/var data operator/img/scr_12.png" width="900px" alt="Check">

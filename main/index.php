@@ -98,7 +98,7 @@ include "include/session.php";
           <div class="card-body">
             <h5 class="card-title">' . $course['name'] . '</h5>
             <p class="card-text">' . $course['description'] . '</p>
-            <a href="' . $course['link'] . '" class="btn btn-primary">Go somewhere</a>
+            <a href="' . $course['link'] . '" class="btn btn-primary">Go to course</a>
           </div>
         </div>
       </div> ';
