@@ -4,27 +4,14 @@
   $result = $conn->query($sql);
   foreach ($result as $course) {
     echo '
-      <a href="' . BASE_URL . $course["link"] . '">
+      <a href="' . $course["link"] . '">
       ' . $course["icon"] . '
       ' . $course["name"] . '
       </a>
       ';
   }
   ?>
-  <div class="dropdown">
-    <button
-      class="btn btn-secondary dropdown-toggle"
-      style="margin-top: 50px; margin-left: 30px"
-      type="button"
-      data-bs-toggle="dropdown"
-      aria-expanded="false">
-      More
-    </button>
-    <ul class="dropdown-menu">
-      <li><a href="#" class="dropdown-item">Help</a></li>
-    </ul>
-  </div>
-  <button class="toggle-btn hide-lg" type="button" onclick="changeTheme()">
-    Switch theme
-  </button>
+  <a href=""><i class="fas fa-envelope"></i> Contact</a>
+  <a href=""><i class="fas fa-info-circle"></i> About</a>
+  <a href=""><i class="fas fa-file-contract"></i> Terms of Use</a>
 </div>

@@ -82,10 +82,29 @@ include "include/session.php";
     <section class="about-section">
       <h1 class="section-title">About website</h1>
       <p class="section-par">
-        This website is about programming, it covers languages such as C++,
-        Python, Javascript, PHP/SQL, and web design (HTML/CSS).
+        Computer Mind is an educational platform dedicated to providing high-quality programming courses and resources for learners of all levels. Our mission is to empower individuals with the knowledge and skills needed to succeed in the ever-evolving world of technology. We offer a wide range of courses covering various programming languages, frameworks, and development tools, all designed to help you achieve your learning goals and advance your career in tech.
       </p>
     </section>
+
+    <div class="row container mx-auto">
+      <?php
+      $sql = "SELECT name, icon, link, description, img FROM courses WHERE id!=1";
+      $result = $conn->query($sql);
+      foreach ($result as $course) {
+        echo '
+      <div class="col-lg-4">
+        <div class="card" style="width: 100%;">
+          <img class="card-img-top" src="' . $course['img'] . '" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">' . $course['name'] . '</h5>
+            <p class="card-text">' . $course['description'] . '</p>
+            <a href="' . $course['link'] . '" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div> ';
+      }
+      ?>
+    </div>
   </div>
 </body>
 
