@@ -2,13 +2,13 @@
 
 .acc-content {
     background-color: var(--body-color, #f8f9fa);
-    padding: 30px;
+    padding: 0 30px;
     border-radius: 0 0 8px 8px;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     color: var(--font-color, #333);
     line-height: 1.7;
     letter-spacing: 0.3px;
-    border: 1px solid var(--border-color, #e0e0e0);
+    border: none;
     border-top: none;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
