@@ -7,7 +7,7 @@
     """Greets the user by name."""
     print(f"Hello, {name}!")
 
-greet_user("Achilles") # Calling the function</code></pre>
+greet_user("Daniel") # Calling the function</code></pre>
 
 <h2>Return Values</h2>
 <p>A function can send data back to the caller using the <code>return</code> statement. If no return is specified, the function returns <code>None</code> by default.</p>

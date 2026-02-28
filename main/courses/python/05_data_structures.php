@@ -33,12 +33,12 @@ print(tags) # Output: {'AI', 'Python', 'Dev'} - Notice no duplicates!</code></pr
 
 <pre><code class="language-python"># Defining a dictionary
 user = {
-    "name": "Achilles",
+    "name": "Daniel",
     "role": "Programmer",
     "level": 99
 }
 
-print(user["name"]) # Output: Achilles
+print(user["name"]) # Output: Daniel
 user["level"] = 100 # Updating value</code></pre>
 
 <div class="alert alert-info">

@@ -22,7 +22,7 @@ cursor.execute("""
 """)
 
 # 4. Insert data safely (using ? placeholders)
-cursor.execute("INSERT INTO users (name, email) VALUES (?, ?)", ("Achilles", "a@test.com"))
+cursor.execute("INSERT INTO users (name, email) VALUES (?, ?)", ("Daniel", "daniel@test.com"))
 
 # 5. Save changes and close
 conn.commit()

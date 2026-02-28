@@ -11,7 +11,7 @@
   session_start();
   
   // Storing data
-  $_SESSION["username"] = "dev_achilles";
+  $_SESSION["username"] = "dev_daniel";
   $_SESSION["login_time"] = time();
   
   echo "Session has been started and variables are set.";

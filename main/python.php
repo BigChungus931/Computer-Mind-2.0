@@ -13,6 +13,9 @@ include "include/session.php";
   <link rel="stylesheet" href="Bootstrap/bootstrap.css" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/course_content.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
     body {
       -webkit-font-smoothing: antialiased;

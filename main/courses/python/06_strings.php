@@ -22,11 +22,11 @@ print(s[::-1])  # "dniMretupmoC" (Reverses the string!)</code></pre>
 <h2>The Power of f-strings</h2>
 <p>Introduced in Python 3.6, <strong>Formatted String Literals</strong> (f-strings) are the fastest and most readable way to format text. Just prefix the string with <code>f</code> and use <code>{}</code> for variables or expressions.</p>
 
-<pre><code class="language-python">name = "Achilles"
+<pre><code class="language-python">name = "Daniel"
 level = 10
 
 print(f"User: {name.upper()} | Level: {level * 2}")
-# Output: User: ACHILLES | Level: 20</code></pre>
+# Output: User: DANIEL | Level: 20</code></pre>
 
 <div class="alert alert-info">
     <strong>Immutability:</strong> In Python, strings are <strong>immutable</strong>. This means you cannot change a character in place (e.g., <code>s[0] = 'K'</code> will error). You must always create a <em>new</em> string instead.
