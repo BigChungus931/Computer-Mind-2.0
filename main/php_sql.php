@@ -15,18 +15,49 @@ include "include/session.php";
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/course_content.css" />
   <style>
+    body {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
     .acc-header {
       background: radial-gradient(circle,
           rgb(225, 255, 184),
           rgb(200, 255, 122));
       color: black;
+      margin-top: 0;
+      border-radius: 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .acc-item:first-child .acc-header {
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+
+    .acc-item:last-child .acc-header {
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      border-bottom: none;
     }
 
     .acc-header:hover {
-      background-color: rgb(44, 44, 211);
+      background: radial-gradient(circle,
+          rgb(200, 255, 122),
+          rgb(180, 240, 100));
+      padding-left: 30px;
     }
   </style>
+
+  <!-- Highlight.js for VSCode style syntax highlighting -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/vs2015.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/php.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/sql.min.js"></script>
+  <script>hljs.highlightAll();</script>
 </head>
 
 <body>
@@ -180,7 +211,7 @@ include "include/session.php";
             PHP syntax and basic programming concepts
           </button>
           <div class="acc-content">
-            <p></p>
+            <?php include "courses/php_sql/01_syntax.php"; ?>
           </div>
         </div>
 
@@ -189,56 +220,56 @@ include "include/session.php";
             Variables, data types, and operators
           </button>
           <div class="acc-content">
-            <p></p>
+            <?php include "courses/php_sql/02_variables.php"; ?>
           </div>
         </div>
 
         <div class="acc-item">
           <button class="acc-header">Control structures and functions</button>
           <div class="acc-content">
-            <p></p>
+            <?php include "courses/php_sql/03_control_functions.php"; ?>
           </div>
         </div>
 
         <div class="acc-item">
           <button class="acc-header">Arrays and string manipulation</button>
           <div class="acc-content">
-            <p></p>
+            <?php include "courses/php_sql/04_arrays_strings.php"; ?>
           </div>
         </div>
 
         <div class="acc-item">
-          <button class="acc-header">Control structures and functions</button>
+          <button class="acc-header">Working with Forms (GET & POST)</button>
           <div class="acc-content">
-            <p></p>
+            <?php include "courses/php_sql/05_forms.php"; ?>
           </div>
         </div>
 
         <div class="acc-item">
           <button class="acc-header">Session management and cookies</button>
           <div class="acc-content">
-            <p></p>
+            <?php include "courses/php_sql/06_sessions.php"; ?>
           </div>
         </div>
 
         <div class="acc-item">
           <button class="acc-header">File operations and uploads</button>
           <div class="acc-content">
-            <p></p>
+            <?php include "courses/php_sql/07_files.php"; ?>
           </div>
         </div>
 
         <div class="acc-item">
           <button class="acc-header">Object-oriented PHP</button>
           <div class="acc-content">
-            <p></p>
+            <?php include "courses/php_sql/08_oop.php"; ?>
           </div>
         </div>
 
         <div class="acc-item">
           <button class="acc-header">Error handling and debugging</button>
           <div class="acc-content">
-            <p></p>
+            <?php include "courses/php_sql/09_errors.php"; ?>
           </div>
         </div>
 
@@ -247,7 +278,7 @@ include "include/session.php";
             Introduction to databases and SQL
           </button>
           <div class="acc-content">
-            <p></p>
+            <?php include "courses/php_sql/10_db_intro.php"; ?>
           </div>
         </div>
 
@@ -256,7 +287,7 @@ include "include/session.php";
             Database design and normalization
           </button>
           <div class="acc-content">
-            <p></p>
+            <?php include "courses/php_sql/11_db_design.php"; ?>
           </div>
         </div>
 
@@ -265,42 +296,42 @@ include "include/session.php";
             SQL queries (SELECT, INSERT, UPDATE, DELETE)
           </button>
           <div class="acc-content">
-            <p></p>
+            <?php include "courses/php_sql/12_sql_queries.php"; ?>
           </div>
         </div>
 
         <div class="acc-item">
           <button class="acc-header">Joins and relationships</button>
           <div class="acc-content">
-            <p></p>
+            <?php include "courses/php_sql/13_joins.php"; ?>
           </div>
         </div>
 
         <div class="acc-item">
           <button class="acc-header">MySQL/PostgreSQL administration</button>
           <div class="acc-content">
-            <p></p>
+            <?php include "courses/php_sql/14_admin.php"; ?>
           </div>
         </div>
 
         <div class="acc-item">
           <button class="acc-header">Database platforms</button>
           <div class="acc-content">
-            <p></p>
+            <?php include "courses/php_sql/15_platforms.php"; ?>
           </div>
         </div>
 
         <div class="acc-item">
           <button class="acc-header">PHP-MySQL integration</button>
           <div class="acc-content">
-            <p></p>
+            <?php include "courses/php_sql/16_integration.php"; ?>
           </div>
         </div>
 
         <div class="acc-item">
           <button class="acc-header">Prepared statements and security</button>
           <div class="acc-content">
-            <p></p>
+            <?php include "courses/php_sql/17_prepared.php"; ?>
           </div>
         </div>
 
@@ -309,28 +340,28 @@ include "include/session.php";
             Database optimization and indexing
           </button>
           <div class="acc-content">
-            <p></p>
+            <?php include "courses/php_sql/18_opt.php"; ?>
           </div>
         </div>
 
         <div class="acc-item">
           <button class="acc-header">Web application security</button>
           <div class="acc-content">
-            <p></p>
+            <?php include "courses/php_sql/19_security.php"; ?>
           </div>
         </div>
 
         <div class="acc-item">
           <button class="acc-header">MVC architecture patterns</button>
           <div class="acc-content">
-            <p></p>
+            <?php include "courses/php_sql/20_mvc.php"; ?>
           </div>
         </div>
 
         <div class="acc-item">
           <button class="acc-header">Popular PHP frameworks overview</button>
           <div class="acc-content">
-            <p></p>
+            <?php include "courses/php_sql/21_frameworks.php"; ?>
           </div>
         </div>
       </div>
