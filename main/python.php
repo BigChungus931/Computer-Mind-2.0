@@ -12,20 +12,50 @@ include "include/session.php";
   <script src="js/load.js"></script>
   <link rel="stylesheet" href="Bootstrap/bootstrap.css" />
   <link rel="stylesheet" href="css/style.css" />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/course_content.css" />
   <style>
+    body {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
     .acc-header {
-      background: linear-gradient(to left,
-          rgb(80, 157, 224),
-          rgb(255, 219, 101));
+      background: linear-gradient(135deg,
+          #3776ab,
+          #ffd43b);
+      color: white;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+      margin-top: 0;
+      border-radius: 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .acc-item:first-child .acc-header {
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+
+    .acc-item:last-child .acc-header {
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      border-bottom: none;
     }
 
     .acc-header:hover {
-      background-color: rgb(44, 44, 211);
+      background: linear-gradient(135deg,
+          #2b5b84,
+          #e6be1e);
+      padding-left: 35px;
+      color: #fff;
     }
   </style>
+
+  <!-- Highlight.js for VSCode style syntax highlighting -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/vs2015.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js"></script>
+  <script>hljs.highlightAll();</script>
 </head>
 
 <body>
@@ -176,143 +206,135 @@ include "include/session.php";
     <section class="acc-section">
       <div class="acc">
         <div class="acc-item">
-          <button class="acc-header">
-            Introduction to Python and IDE setup
-          </button>
+          <button class="acc-header">Introduction to Python and IDE setup</button>
           <div class="acc-content">
-            <p></p>
+            <?php include "courses/python/01_intro.php"; ?>
           </div>
         </div>
 
         <div class="acc-item">
           <button class="acc-header">Basic syntax and indentation</button>
           <div class="acc-content">
-            <p></p>
+            <?php include "courses/python/02_syntax.php"; ?>
           </div>
         </div>
 
         <div class="acc-item">
-          <button class="acc-header">
-            Variables, data types, and input/output
-          </button>
+          <button class="acc-header">Variables, data types, and input/output</button>
           <div class="acc-content">
-            <p></p>
+            <?php include "courses/python/03_variables.php"; ?>
           </div>
         </div>
 
         <div class="acc-item">
           <button class="acc-header">Operators and control flow</button>
           <div class="acc-content">
-            <p></p>
+            <?php include "courses/python/04_control_flow.php"; ?>
           </div>
         </div>
 
         <div class="acc-item">
-          <button class="acc-header">
-            Lists, tuples, sets, and dictionaries
-          </button>
+          <button class="acc-header">Lists, tuples, sets, and dictionaries</button>
           <div class="acc-content">
-            <p></p>
+            <?php include "courses/python/05_data_structures.php"; ?>
           </div>
         </div>
 
         <div class="acc-item">
-          <button class="acc-header">
-            String manipulation and formatting
-          </button>
+          <button class="acc-header">String manipulation and formatting</button>
           <div class="acc-content">
-            <p></p>
+            <?php include "courses/python/06_strings.php"; ?>
           </div>
         </div>
 
         <div class="acc-item">
           <button class="acc-header">Functions and parameters</button>
           <div class="acc-content">
-            <p></p>
+            <?php include "courses/python/07_functions.php"; ?>
           </div>
         </div>
 
         <div class="acc-item">
           <button class="acc-header">Lambda functions</button>
           <div class="acc-content">
-            <p></p>
+            <?php include "courses/python/08_lambda.php"; ?>
           </div>
         </div>
 
         <div class="acc-item">
           <button class="acc-header">List comprehensions</button>
           <div class="acc-content">
-            <p></p>
+            <?php include "courses/python/09_list_comprehension.php"; ?>
           </div>
         </div>
 
         <div class="acc-item">
           <button class="acc-header">File handling</button>
           <div class="acc-content">
-            <p></p>
+            <?php include "courses/python/10_file_handling.php"; ?>
           </div>
         </div>
 
         <div class="acc-item">
           <button class="acc-header">Modules and packages</button>
           <div class="acc-content">
-            <p></p>
+            <?php include "courses/python/11_modules.php"; ?>
           </div>
         </div>
 
         <div class="acc-item">
           <button class="acc-header">Exception handling</button>
           <div class="acc-content">
-            <p></p>
+            <?php include "courses/python/12_exceptions.php"; ?>
           </div>
         </div>
 
         <div class="acc-item">
           <button class="acc-header">Classes and objects</button>
           <div class="acc-content">
-            <p></p>
+            <?php include "courses/python/13_oop.php"; ?>
           </div>
         </div>
 
         <div class="acc-item">
           <button class="acc-header">Inheritance and polymorphism</button>
           <div class="acc-content">
-            <p></p>
+            <?php include "courses/python/14_inheritance.php"; ?>
           </div>
         </div>
 
         <div class="acc-item">
           <button class="acc-header">Decorators and generators</button>
           <div class="acc-content">
-            <p></p>
+            <?php include "courses/python/15_advanced_logic.php"; ?>
           </div>
         </div>
 
         <div class="acc-item">
           <button class="acc-header">Regular expressions</button>
           <div class="acc-content">
-            <p></p>
+            <?php include "courses/python/16_regex.php"; ?>
           </div>
         </div>
 
         <div class="acc-item">
           <button class="acc-header">Database connectivity</button>
           <div class="acc-content">
-            <p></p>
+            <?php include "courses/python/17_database.php"; ?>
           </div>
         </div>
 
         <div class="acc-item">
           <button class="acc-header">Web scraping basics</button>
           <div class="acc-content">
-            <p></p>
+            <?php include "courses/python/18_scraping.php"; ?>
           </div>
         </div>
 
         <div class="acc-item">
           <button class="acc-header">Testing and debugging</button>
           <div class="acc-content">
-            <p></p>
+            <?php include "courses/python/19_testing.php"; ?>
           </div>
         </div>
       </div>
