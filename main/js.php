@@ -14,6 +14,13 @@ include "include/session.php";
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/vscode.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/course_content.css" />
+  
+  <!-- Highlight.js for VSCode style syntax highlighting -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/vs2015.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/javascript.min.js"></script>
+  <script>hljs.highlightAll();</script>
 </head>
 
 <body>

@@ -93,52 +93,52 @@ if (count !== 0) {
         <th>Truthy/Falsy</th>
     </tr>
     <tr>
-        <td><code>true</code></td>
+        <td><code class="language-javascript">true</code></td>
         <td>Boolean</td>
         <td>Truthy</td>
     </tr>
     <tr>
-        <td><code>false</code></td>
+        <td><code class="language-javascript">false</code></td>
         <td>Boolean</td>
         <td>Falsy</td>
     </tr>
     <tr>
-        <td><code>1, 42, -5, 3.14</code></td>
+        <td><code class="language-javascript">1, 42, -5, 3.14</code></td>
         <td>Number (non-zero)</td>
         <td>Truthy</td>
     </tr>
     <tr>
-        <td><code>0</code></td>
+        <td><code class="language-javascript">0</code></td>
         <td>Number</td>
         <td>Falsy</td>
     </tr>
     <tr>
-        <td><code>"hello", "0", " "</code></td>
+        <td><code class="language-javascript">"hello", "0", " "</code></td>
         <td>String (non-empty)</td>
         <td>Truthy</td>
     </tr>
     <tr>
-        <td><code>""</code></td>
+        <td><code class="language-javascript">""</code></td>
         <td>String (empty)</td>
         <td>Falsy</td>
     </tr>
     <tr>
-        <td><code>null</code></td>
+        <td><code class="language-javascript">null</code></td>
         <td>Null</td>
         <td>Falsy</td>
     </tr>
     <tr>
-        <td><code>undefined</code></td>
+        <td><code class="language-javascript">undefined</code></td>
         <td>Undefined</td>
         <td>Falsy</td>
     </tr>
     <tr>
-        <td><code>NaN</code></td>
+        <td><code class="language-javascript">NaN</code></td>
         <td>Number</td>
         <td>Falsy</td>
     </tr>
     <tr>
-        <td><code>[], {}</code></td>
+        <td><code class="language-javascript">[], {}</code></td>
         <td>Array, Object</td>
         <td>Truthy (always!)</td>
     </tr>
@@ -146,8 +146,8 @@ if (count !== 0) {
 
 <h2>Best Practices</h2>
 <ul>
-    <li>When in doubt, use explicit comparisons: <code>if (count > 0)</code> instead of <code>if (count)</code></li>
-    <li>For checking existence, relying on truthy/falsy is fine: <code>if (user)</code></li>
+    <li>When in doubt, use explicit comparisons: <code class="language-javascript">if (count > 0)</code> instead of <code class="language-javascript">if (count)</code></li>
+    <li>For checking existence, relying on truthy/falsy is fine: <code class="language-javascript">if (user)</code></li>
     <li>Remember arrays and objects are always truthy, even when empty</li>
     <li>Be consistent - if some checks are explicit, make them all explicit</li>
     <li>Write comments if your truthy/falsy logic might be confusing</li>

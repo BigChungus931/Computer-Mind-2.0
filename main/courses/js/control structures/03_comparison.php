@@ -13,7 +13,7 @@
 <img src="courses/js/control%20structures/img/scr_3_strict_loose.png" width="900px" alt="Strict vs Loose Equality">
 
 <h2>Best Practice: Always Use === and !==</h2>
-<p><strong>Important:</strong> Always use strict equality (<code>===</code> and <code>!==</code>) to avoid unexpected type coercion and bugs.</p>
+<p><strong>Important:</strong> Always use strict equality (<code class="language-javascript">===</code> and <code class="language-javascript">!==</code>) to avoid unexpected type coercion and bugs.</p>
 
 <ul>
     <li>Strict equality is safer and more predictable</li>

@@ -13,11 +13,11 @@ condition ? valueIfTrue : valueIfFalse
 
 <p><strong>Parts:</strong></p>
 <ul>
-    <li><code>condition</code> - expression that evaluates to true or false</li>
-    <li><code>?</code> - separates condition from true case</li>
-    <li><code>valueIfTrue</code> - returned if condition is true</li>
-    <li><code>:</code> - separates true case from false case</li>
-    <li><code>valueIfFalse</code> - returned if condition is false</li>
+    <li><code class="language-javascript">condition</code> - expression that evaluates to true or false</li>
+    <li><code class="language-javascript">?</code> - separates condition from true case</li>
+    <li><code class="language-javascript">valueIfTrue</code> - returned if condition is true</li>
+    <li><code class="language-javascript">:</code> - separates true case from false case</li>
+    <li><code class="language-javascript">valueIfFalse</code> - returned if condition is false</li>
 </ul>
 
 <h2>Simple Example</h2>
@@ -186,6 +186,6 @@ let message = score >= 75 && !isCheating && studentAttended ?
     <li>Keep ternary expressions on one line when possible</li>
     <li>Use if-else for complex logic</li>
     <li>Avoid nesting ternaries more than one level deep</li>
-    <li>Use parentheses to make complex ternaries clearer: <code>(x > 5) ? "yes" : "no"</code></li>
+    <li>Use parentheses to make complex ternaries clearer: <code class="language-javascript">(x > 5) ? "yes" : "no"</code></li>
     <li>Don't use if the condition is confusing - readability matters!</li>
 </ul>

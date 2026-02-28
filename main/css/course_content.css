@@ -1,0 +1,155 @@
+/* Modern styling for C++ Course Content */
+
+.acc-content {
+    background-color: var(--body-color, #f8f9fa);
+    padding: 30px;
+    border-radius: 0 0 8px 8px;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: var(--font-color, #333);
+    line-height: 1.7;
+    letter-spacing: 0.3px;
+    border: 1px solid var(--border-color, #e0e0e0);
+    border-top: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.acc-content h1 {
+    font-size: 32px;
+    color: rgb(0, 157, 255) !important;
+    margin-bottom: 24px;
+    font-weight: 700;
+    border-bottom: 2px solid rgb(0, 157, 255);
+    padding-bottom: 10px;
+}
+
+.acc-content h2 {
+    font-size: 26px;
+    color: crimson !important;
+    margin-top: 32px;
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+.acc-content h3 {
+    font-size: 22px;
+    color: orange !important;
+    margin-top: 28px;
+    margin-bottom: 14px;
+    font-weight: 600;
+}
+
+.acc-content p {
+    font-size: 18px;
+    margin-bottom: 18px;
+    line-height: 1.7;
+    color: var(--font-color, #4a4a4a) !important;
+}
+
+.acc-content ul, .acc-content ol {
+    margin-bottom: 24px;
+    padding-left: 28px;
+}
+
+/* Custom modern bullets */
+.acc-content ul li {
+    list-style-type: none;
+    position: relative;
+}
+.acc-content ul li::before {
+    content: "■";
+    color: rgb(0, 157, 255);
+    font-size: 10px;
+    position: absolute;
+    left: -22px;
+    top: 6px;
+}
+
+.acc-content li {
+    margin-bottom: 10px;
+    line-height: 1.7;
+    font-size: 18px;
+    color: var(--font-color, #4a4a4a) !important;
+}
+
+/* VSCode-style Code Block Container */
+.acc-content pre {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    margin: 25px 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    position: relative;
+    padding-top: 36px; /* Space for the fake title bar */
+    border: 1px solid #323233;
+}
+
+/* VSCode Mac-style Fake Window Controls */
+.acc-content pre::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 36px;
+    background-color: #323233;
+    border-bottom: 1px solid #111;
+    z-index: 1;
+}
+
+.acc-content pre::after {
+    content: '';
+    position: absolute;
+    top: 13px;
+    left: 15px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ff5f56;
+    box-shadow: 20px 0 0 #ffbd2e, 40px 0 0 #27c93f;
+    z-index: 2;
+}
+
+/* The actual code text */
+.acc-content pre code {
+    display: block;
+    padding: 18px 20px;
+    overflow-x: auto;
+    color: #d4d4d4;
+    font-family: 'Fira Code', 'Consolas', monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    background-color: transparent;
+    border-radius: 0;
+}
+
+/* Inline code styling */
+.acc-content p code, .acc-content li code {
+    background-color: var(--border-color, #e9ecef);
+    color: #d63384;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'Fira Code', 'Consolas', monospace;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Custom Alert Boxes */
+.alert {
+    padding: 15px;
+    margin: 20px 0;
+    border-left: 4px solid;
+    border-radius: 4px;
+}
+
+.alert-info {
+    background-color: #e8f4f8;
+    border-left-color: #17a2b8;
+    color: #0c5460;
+}
+
+.alert-warning {
+    background-color: #fff3cd;
+    border-left-color: #ffc107;
+    color: #856404;
+}

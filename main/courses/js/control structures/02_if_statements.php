@@ -1,25 +1,25 @@
 <h1 id="ifstmt">If Statements in JavaScript</h1>
 
 <h2>What is an If Statement?</h2>
-<p>The <code>if</code> statement is the most basic control structure. It executes code only when a specific condition is true.</p>
+<p>The <code class="language-javascript">if</code> statement is the most basic control structure. It executes code only when a specific condition is true.</p>
 
 <h3>Basic If Statement</h3>
 <p>Syntax breakdown:</p>
 <ul>
-    <li><code>if</code> - keyword that starts the conditional</li>
-    <li><code>(condition)</code> - expression that evaluates to true or false</li>
-    <li><code>{ }</code> - code block that runs if condition is true</li>
+    <li><code class="language-javascript">if</code> - keyword that starts the conditional</li>
+    <li><code class="language-javascript">(condition)</code> - expression that evaluates to true or false</li>
+    <li><code class="language-javascript">{ }</code> - code block that runs if condition is true</li>
 </ul>
 
 <img src="courses/js/control%20structures/img/scr_2_if.png" width="900px" alt="Basic If Statement">
 
 <h2>If-Else Statement</h2>
-<p>Use <code>else</code> to specify code that runs when the condition is false:</p>
+<p>Use <code class="language-javascript">else</code> to specify code that runs when the condition is false:</p>
 
 <img src="courses/js/control%20structures/img/scr_2_if_else.png" width="900px" alt="If-Else Statement">
 
 <h2>If-Else If-Else Chain</h2>
-<p>For multiple conditions, use <code>else if</code>:</p>
+<p>For multiple conditions, use <code class="language-javascript">else if</code>:</p>
 
 <img src="courses/js/control%20structures/img/scr_2_else_if.png" width="900px" alt="If-Else If Chain">
 

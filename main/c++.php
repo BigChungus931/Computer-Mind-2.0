@@ -15,6 +15,7 @@ include "include/session.php";
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/course_content.css" />
   <style>
     .acc-header {
       background: linear-gradient(to right,
@@ -26,6 +27,12 @@ include "include/session.php";
       background-color: rgb(44, 44, 211);
     }
   </style>
+  
+  <!-- Highlight.js for VSCode style syntax highlighting -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/vs2015.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/cpp.min.js"></script>
+  <script>hljs.highlightAll();</script>
 </head>
 
 <body>
@@ -179,14 +186,14 @@ include "include/session.php";
             Introduction to C++ and development environment
           </button>
           <div class="acc-content">
-            <p></p>
+            <?php include "courses/c++/introduction/01_intro.php"; ?>
           </div>
         </div>
 
         <div class="acc-item">
           <button class="acc-header">Basic syntax and structure</button>
           <div class="acc-content">
-            <p></p>
+            <?php include "courses/c++/basic_syntax/01_syntax.php"; ?>
           </div>
         </div>
 
@@ -195,137 +202,138 @@ include "include/session.php";
             Variables, constants, and data types
           </button>
           <div class="acc-content">
-            <p></p>
+            <?php include "courses/c++/variables_data_types/01_variables.php"; ?>
           </div>
+        </div>
 
-          <div class="acc-item">
-            <button class="acc-header">Operators and expressions</button>
+        <div class="acc-item">
+          <button class="acc-header">Operators and expressions</button>
             <div class="acc-content">
-              <p></p>
+              <?php include "courses/c++/operators/01_operators.php"; ?>
             </div>
           </div>
 
-          <div class="acc-item">
-            <button class="acc-header">Input/output with cin/cout</button>
-            <div class="acc-content">
-              <p></p>
-            </div>
+        <div class="acc-item">
+          <button class="acc-header">Input/output with cin/cout</button>
+          <div class="acc-content">
+            <?php include "courses/c++/io/01_io.php"; ?>
           </div>
+        </div>
 
-          <div class="acc-item">
-            <button class="acc-header">
-              Control structures (if/else, loops, switch)
-            </button>
-            <div class="acc-content">
-              <p></p>
-            </div>
+        <div class="acc-item">
+          <button class="acc-header">
+            Control structures (if/else, loops, switch)
+          </button>
+          <div class="acc-content">
+            <?php include "courses/c++/control_structs/01_control.php"; ?>
           </div>
+        </div>
 
-          <div class="acc-item">
-            <button class="acc-header">
-              Functions and function overloading
-            </button>
-            <div class="acc-content">
-              <p></p>
-            </div>
+        <div class="acc-item">
+          <button class="acc-header">
+            Functions and function overloading
+          </button>
+          <div class="acc-content">
+            <?php include "courses/c++/functions/01_functions.php"; ?>
           </div>
+        </div>
 
-          <div class="acc-item">
-            <button class="acc-header">Arrays and strings</button>
-            <div class="acc-content">
-              <p></p>
-            </div>
+        <div class="acc-item">
+          <button class="acc-header">Arrays and strings</button>
+          <div class="acc-content">
+            <?php include "courses/c++/arrays_strings/01_arrays.php"; ?>
           </div>
+        </div>
 
-          <div class="acc-item">
-            <button class="acc-header">Pointers and references</button>
-            <div class="acc-content">
-              <p></p>
-            </div>
+        <div class="acc-item">
+          <button class="acc-header">Pointers and references</button>
+          <div class="acc-content">
+            <?php include "courses/c++/pointers_refs/01_pointers.php"; ?>
           </div>
+        </div>
 
-          <div class="acc-item">
-            <button class="acc-header">Dynamic memory allocation</button>
-            <div class="acc-content">
-              <p></p>
-            </div>
+        <div class="acc-item">
+          <button class="acc-header">Dynamic memory allocation</button>
+          <div class="acc-content">
+            <?php include "courses/c++/dynamic_memory/01_dynamic.php"; ?>
           </div>
+        </div>
 
-          <div class="acc-item">
-            <button class="acc-header">Structures and unions</button>
-            <div class="acc-content">
-              <p></p>
-            </div>
+        <div class="acc-item">
+          <button class="acc-header">Structures and unions</button>
+          <div class="acc-content">
+            <?php include "courses/c++/structs_unions/01_structs.php"; ?>
           </div>
+        </div>
 
-          <div class="acc-item">
-            <button class="acc-header">Classes and objects</button>
-            <div class="acc-content">
-              <p></p>
-            </div>
+        <div class="acc-item">
+          <button class="acc-header">Classes and objects</button>
+          <div class="acc-content">
+            <?php include "courses/c++/classes_objects/01_classes.php"; ?>
           </div>
+        </div>
 
-          <div class="acc-item">
-            <button class="acc-header">Constructors and destructors</button>
-            <div class="acc-content">
-              <p></p>
-            </div>
+        <div class="acc-item">
+          <button class="acc-header">Constructors and destructors</button>
+          <div class="acc-content">
+            <?php include "courses/c++/constructors_destructors/01_constructors.php"; ?>
           </div>
+        </div>
 
-          <div class="acc-item">
-            <button class="acc-header">Inheritance and polymorphism</button>
-            <div class="acc-content">
-              <p></p>
-            </div>
+        <div class="acc-item">
+          <button class="acc-header">Inheritance and polymorphism</button>
+          <div class="acc-content">
+            <?php include "courses/c++/inheritance_polymorphism/01_inheritance.php"; ?>
           </div>
+        </div>
 
-          <div class="acc-item">
-            <button class="acc-header">
-              Virtual functions and abstract classes
-            </button>
-            <div class="acc-content">
-              <p></p>
-            </div>
+        <div class="acc-item">
+          <button class="acc-header">
+            Virtual functions and abstract classes
+          </button>
+          <div class="acc-content">
+            <?php include "courses/c++/virtual_functions/01_virtual.php"; ?>
           </div>
+        </div>
 
-          <div class="acc-item">
-            <button class="acc-header">Operator overloading</button>
-            <div class="acc-content">
-              <p></p>
-            </div>
+        <div class="acc-item">
+          <button class="acc-header">Operator overloading</button>
+          <div class="acc-content">
+            <?php include "courses/c++/operator_overloading/01_operator.php"; ?>
           </div>
+        </div>
 
-          <div class="acc-item">
-            <button class="acc-header">
-              Templates and generic programming
-            </button>
-            <div class="acc-content">
-              <p></p>
-            </div>
+        <div class="acc-item">
+          <button class="acc-header">
+            Templates and generic programming
+          </button>
+          <div class="acc-content">
+            <?php include "courses/c++/templates/01_templates.php"; ?>
           </div>
+        </div>
 
-          <div class="acc-item">
-            <button class="acc-header">
-              Standard Template Library (STL)
-            </button>
-            <div class="acc-content">
-              <p></p>
-            </div>
+        <div class="acc-item">
+          <button class="acc-header">
+            Standard Template Library (STL)
+          </button>
+          <div class="acc-content">
+            <?php include "courses/c++/stl/01_stl.php"; ?>
           </div>
+        </div>
 
-          <div class="acc-item">
-            <button class="acc-header">File handling</button>
-            <div class="acc-content">
-              <p></p>
-            </div>
+        <div class="acc-item">
+          <button class="acc-header">File handling</button>
+          <div class="acc-content">
+            <?php include "courses/c++/file_handling/01_file.php"; ?>
           </div>
+        </div>
 
-          <div class="acc-item">
-            <button class="acc-header">Exception handling</button>
-            <div class="acc-content">
-              <p></p>
-            </div>
+        <div class="acc-item">
+          <button class="acc-header">Exception handling</button>
+          <div class="acc-content">
+            <?php include "courses/c++/exception_handling/01_exception.php"; ?>
           </div>
+        </div>
         </div>
       </div>
     </section>
