@@ -1,5 +1,6 @@
 <?php
 define("BASE_URL", "/Computer%20Mind/Computer-Mind-2.0/main/");
+
 $server = "localhost";
 $username = "root";
 $password = "";

@@ -15,19 +15,52 @@ include "include/session.php";
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-</head>
-<style>
-  .acc-header {
-    background: linear-gradient(to right,
-        rgb(136, 207, 255),
-        rgb(83, 186, 255));
-    color: black;
-  }
+  <link rel="stylesheet" href="css/course_content.css" />
+  <style>
+    body {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
 
-  .acc-header:hover {
-    background-color: rgb(44, 44, 211);
-  }
-</style>
+    .acc-header {
+      background: radial-gradient(circle,
+          rgb(136, 207, 255),
+          rgb(83, 186, 255));
+      color: black;
+      margin-top: 0;
+      border-radius: 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .acc-item:first-child .acc-header {
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+
+    .acc-item:last-child .acc-header {
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      border-bottom: none;
+    }
+
+    .acc-header:hover {
+      background: radial-gradient(circle,
+          rgb(83, 186, 255),
+          rgb(60, 160, 240));
+      padding-left: 30px;
+    }
+  </style>
+
+  <!-- Highlight.js for VSCode style syntax highlighting -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/vs2015.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/xml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/css.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/javascript.min.js"></script>
+  <script>
+    hljs.highlightAll();
+  </script>
 
 <body>
   <?php
@@ -182,49 +215,51 @@ include "include/session.php";
             HTML fundamentals and document structure
           </button>
           <div class="acc-content">
-            <p></p>
+            <?php include "courses/web_design/01_html_essentials/01_intro.php"; ?>
           </div>
         </div>
 
         <div class="acc-item">
           <button class="acc-header">HTML5 semantic elements</button>
           <div class="acc-content">
-            <p></p>
+            <?php include "courses/web_design/01_html_essentials/02_tags.php"; ?>
           </div>
         </div>
 
         <div class="acc-item">
           <button class="acc-header">Forms and input elements</button>
           <div class="acc-content">
-            <p></p>
+            <?php include "courses/web_design/01_html_essentials/03_forms.php"; ?>
           </div>
         </div>
 
         <div class="acc-item">
           <button class="acc-header">CSS basics and selectors</button>
           <div class="acc-content">
-            <p></p>
+            <?php include "courses/web_design/02_css_fundamentals/01_intro.php"; ?>
+            <?php include "courses/web_design/02_css_fundamentals/02_selectors.php"; ?>
           </div>
         </div>
 
         <div class="acc-item">
           <button class="acc-header">Box model and layout</button>
           <div class="acc-content">
-            <p></p>
+            <?php include "courses/web_design/02_css_fundamentals/03_box_model.php"; ?>
           </div>
         </div>
 
         <div class="acc-item">
           <button class="acc-header">Typography and color theory</button>
           <div class="acc-content">
-            <p></p>
+            <?php include "courses/web_design/02_css_fundamentals/04_typography.php"; ?>
           </div>
         </div>
 
         <div class="acc-item">
           <button class="acc-header">CSS Grid and Flexbox</button>
           <div class="acc-content">
-            <p></p>
+            <?php include "courses/web_design/03_advanced_layouts/02_grid.php"; ?>
+            <?php include "courses/web_design/03_advanced_layouts/01_flexbox.php"; ?>
           </div>
         </div>
 
@@ -233,77 +268,77 @@ include "include/session.php";
             Responsive design and media queries
           </button>
           <div class="acc-content">
-            <p></p>
+            <?php include "courses/web_design/04_responsive_design/01_media_queries.php"; ?>
           </div>
         </div>
 
         <div class="acc-item">
           <button class="acc-header">CSS animations and transitions</button>
           <div class="acc-content">
-            <p></p>
+            <?php include "courses/web_design/05_animations/01_animations.php"; ?>
           </div>
         </div>
 
         <div class="acc-item">
           <button class="acc-header">JavaScript integration</button>
           <div class="acc-content">
-            <p></p>
+            <?php include "courses/web_design/06_js_integration/01_intro.php"; ?>
           </div>
         </div>
 
         <div class="acc-item">
           <button class="acc-header">Cross-browser compatibility</button>
           <div class="acc-content">
-            <p></p>
+            <?php include "courses/web_design/07_further_topics/01_summary.php"; ?>
           </div>
         </div>
 
         <div class="acc-item">
           <button class="acc-header">Web accessibility principles</button>
           <div class="acc-content">
-            <p></p>
+            <?php include "courses/web_design/07_further_topics/01_summary.php"; ?>
           </div>
         </div>
 
         <div class="acc-item">
           <button class="acc-header">Performance optimization</button>
           <div class="acc-content">
-            <p></p>
+            <?php include "courses/web_design/07_further_topics/01_summary.php"; ?>
           </div>
         </div>
 
         <div class="acc-item">
           <button class="acc-header">Version control with Git</button>
           <div class="acc-content">
-            <p></p>
+            <?php include "courses/web_design/07_further_topics/01_summary.php"; ?>
           </div>
         </div>
 
         <div class="acc-item">
           <button class="acc-header">Deployment and hosting</button>
           <div class="acc-content">
-            <p></p>
+            <?php include "courses/web_design/07_further_topics/01_summary.php"; ?>
           </div>
         </div>
 
         <div class="acc-item">
           <button class="acc-header">User experience (UX) principles</button>
           <div class="acc-content">
-            <p></p>
+            <?php include "courses/web_design/07_further_topics/01_summary.php"; ?>
           </div>
         </div>
 
         <div class="acc-item">
           <button class="acc-header">Modern CSS frameworks</button>
           <div class="acc-content">
-            <p></p>
+            <?php include "courses/web_design/07_further_topics/01_summary.php"; ?>
           </div>
         </div>
 
         <div class="acc-item">
           <button class="acc-header">Browser developer tools</button>
           <div class="acc-content">
-            <p></p>
+            <?php include "courses/web_design/07_further_topics/01_summary.php"; ?>
           </div>
         </div>
       </div>
