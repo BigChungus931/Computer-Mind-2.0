@@ -772,3 +772,9 @@ table {
   margin-bottom: 10px;
   color: crimson !important;
 }
+
+.img-format {
+  padding-top: 24px;
+  height: 380px;
+  object-fit: cover;
+}
