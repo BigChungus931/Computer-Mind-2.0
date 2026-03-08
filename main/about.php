@@ -37,7 +37,7 @@ include "include/session.php";
 
                     <div class="carousel-inner">
                         <div class="carousel-item active" data-bs-interval="5000">
-                            <img class="d-block w-100" style="height: 800px; object-fit: cover" src="img/coder.PNG" alt="js" />
+                            <img class="d-block w-100" style="height: 800px; object-fit: cover" src="img/coder.PNG" alt="About Us" />
                         </div>
                     </div>
                 </div>
@@ -48,9 +48,38 @@ include "include/session.php";
             <h1 class="section-title">About Us</h1>
         </section>
         <div class="container">
-            <p class="about-text">
-                Welcome to Computer Mind, your trusted partner in computer repair and IT solutions. With over a decade of experience, we are dedicated to providing top-notch services to our clients. Our team of skilled technicians is committed to delivering efficient and reliable solutions for all your computer needs. Whether you're facing hardware issues, software problems, or need assistance with network setup, we have you covered. At Computer Mind, we pride ourselves on our customer-centric approach, ensuring that every client receives personalized attention and exceptional service. Your satisfaction is our priority, and we strive to exceed your expectations with every interaction.
-            </p>
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 class="mb-4">Our Mission</h2>
+                    <p>
+                        At Computer Mind, our mission is to empower individuals with the knowledge and skills needed to thrive in the digital age. We are committed to providing high-quality, accessible, and engaging educational content that helps learners of all levels achieve their goals in technology and programming.
+                    </p>
+                    <img src="img/mission.png" alt="Our Mission" class="img-fluid mt-3" />
+                </div>
+                <div class="col-md-6">
+                    <h2 class="mb-4">Our Vision</h2>
+                    <p>
+                        Our vision is to create a world where everyone has the opportunity to learn and succeed in the field of technology. We strive to be a leading platform for online education, fostering a community of learners who are passionate about coding and innovation.
+                    </p>
+                    <img src="img/vision.png" alt="Our Vision" class="img-fluid mt-3 img-format" />
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <h2 class="mb-4 mt-5">Our Team</h2>
+                    <p>
+                        Our team is composed of passionate educators, experienced developers, and dedicated support staff who work tirelessly to create the best learning experience for our users. We are committed to helping you achieve your goals and succeed in your coding journey.
+                    </p>
+                    <img src="img/group.JPEG" alt="Our Team" class="img-fluid mt-3 img-format" />
+                </div>
+                <div class="col-md-6">
+                    <h2 class="mb-4 mt-5">Our Story</h2>
+                    <p>
+                        Our story began with a simple idea: to make coding education accessible to everyone. We started as a small group of friends who were passionate about programming and wanted to share our knowledge with others. Over time, we grew into a thriving community of learners and educators, and we are excited to continue our journey together.
+                    </p>
+                    <img src="img/story.png" alt="Our Story" class="img-fluid img-format" style="margin-top: -8px;" />
+                </div>
+            </div>
         </div>
     </div>
 </body>
