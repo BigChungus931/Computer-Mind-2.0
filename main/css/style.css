@@ -175,14 +175,34 @@ body {
 .sidebar {
   background-color: var(--side-bar);
   width: var(--sidebar-width);
-  height: 100%;
   position: fixed;
   top: var(--nav-height);
   left: 0;
   bottom: 0;
   transition: transform 0.3s ease;
   border-right: 3px solid var(--border-color);
-  padding-top: 8px;
+  padding-top: 20px;
+  padding-bottom: 2rem;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #ffffff33 transparent;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .dropdown-menu {
@@ -434,11 +454,11 @@ img, video, canvas, svg {
 
   .sidebar {
     top: var(--nav-height) !important;
+    bottom: 0 !important;
     position: fixed;
     width: var(--sidebar-width);
     left: 0;
     transform: translateX(calc(-1 * var(--sidebar-width)));
-    flex-direction: column;
     z-index: 5;
   }
 
@@ -483,12 +503,12 @@ img, video, canvas, svg {
   }
 
   .sidebar {
-    margin-top: var(--nav-height) !important;
+    top: var(--nav-height) !important;
+    bottom: 0 !important;
     position: fixed;
     width: var(--sidebar-width);
     left: 0;
     transform: translateX(calc(-1 * var(--sidebar-width)));
-    flex-direction: column;
     z-index: 5;
   }
 
@@ -557,12 +577,12 @@ img, video, canvas, svg {
   }
 
   .sidebar {
-    margin-top: 0  !important;
+    top: var(--nav-height) !important;
+    bottom: 0 !important;
     position: fixed;
     width: var(--sidebar-width);
     left: 0;
     transform: translateX(calc(-1 * var(--sidebar-width)));
-    flex-direction: column;
     z-index: 5;
   }
 
