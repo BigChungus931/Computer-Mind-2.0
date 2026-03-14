@@ -49,15 +49,15 @@ include "include/session.php";
         </section>
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
-                    <h2 class="mb-4">Our Mission</h2>
+                <div class="col-md-6 about-card">
+                    <h2 class="mb-4 pt-3">Our Mission</h2>
                     <p>
                         At Computer Mind, our mission is to empower individuals with the knowledge and skills needed to thrive in the digital age. We are committed to providing high-quality, accessible, and engaging educational content that helps learners of all levels achieve their goals in technology and programming.
                     </p>
                     <img src="img/mission.png" alt="Our Mission" class="img-fluid mt-3" />
                 </div>
-                <div class="col-md-6">
-                    <h2 class="mb-4">Our Vision</h2>
+                <div class="col-md-6 about-card">
+                    <h2 class="mb-4 pt-3">Our Vision</h2>
                     <p>
                         Our vision is to create a world where everyone has the opportunity to learn and succeed in the field of technology. We strive to be a leading platform for online education, fostering a community of learners who are passionate about coding and innovation.
                     </p>
@@ -65,15 +65,15 @@ include "include/session.php";
                 </div>
             </div>
             <div class="row mt-4">
-                <div class="col-md-6">
-                    <h2 class="mb-4 mt-5">Our Team</h2>
+                <div class="col-md-6 mt-5 about-card">
+                    <h2 class="mb-4 pt-3">Our Team</h2>
                     <p>
                         Our team is composed of passionate educators, experienced developers, and dedicated support staff who work tirelessly to create the best learning experience for our users. We are committed to helping you achieve your goals and succeed in your coding journey.
                     </p>
                     <img src="img/group.JPEG" alt="Our Team" class="img-fluid mt-3 img-format" />
                 </div>
-                <div class="col-md-6">
-                    <h2 class="mb-4 mt-5">Our Story</h2>
+                <div class="col-md-6 mt-5 about-card">
+                    <h2 class="mb-4 pt-3">Our Story</h2>
                     <p>
                         Our story began with a simple idea: to make coding education accessible to everyone. We started as a small group of friends who were passionate about programming and wanted to share our knowledge with others. Over time, we grew into a thriving community of learners and educators, and we are excited to continue our journey together.
                     </p>
